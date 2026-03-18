@@ -237,16 +237,40 @@ body {
 
 /* CONTACT */
 .contact-form {
-  max-width: 400px;
+  width: 100%;
+  max-width: 420px;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.2rem;   /* space between inputs */
+  margin: 0 auto;
 }
 .contact-layout {
-  display: flex;
+  min-height: 75vh;
+  display: grid;
+  place-items: center;
   justify-content: center;   /* horizontal center */
   align-items: center;       /* vertical center (optional) */
   min-height: 70vh;          /* pushes it toward page center */
+}
+.contact-content {
+  display: grid;
+  gap: 2.5rem;   /* SPACE BETWEEN TITLE + FORM */
+  text-align: center;
+}
+.contact-form .btn {
+  margin-top: 0.5rem;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  font-family: "Goldman", sans-serif;
+  font-size: 0.95rem;
+  width: 100%;
+}
+.contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
 }
 /* CART */
 .cart-item {
