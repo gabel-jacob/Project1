@@ -238,7 +238,7 @@ body {
 /* CONTACT */
 .contact-form {
   width: 100%;
-  max-width: 600px;
+  max-width: 550px;
   display: flex;
   flex-direction: column;
   gap: 1.2rem;   /* space between inputs */
@@ -252,6 +252,7 @@ body {
   min-height: 70vh;          /* pushes it toward page center */
 }
 .contact-content {
+  max-width: 800px;
   display: grid;
   gap: 2.5rem;   /* SPACE BETWEEN TITLE + FORM */
   text-align: center;
