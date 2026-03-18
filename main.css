@@ -242,7 +242,12 @@ body {
   flex-direction: column;
   gap: 1rem;
 }
-
+.contact-layout {
+  display: flex;
+  justify-content: center;   /* horizontal center */
+  align-items: center;       /* vertical center (optional) */
+  min-height: 70vh;          /* pushes it toward page center */
+}
 /* CART */
 .cart-item {
   display: grid;
