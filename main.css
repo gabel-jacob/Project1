@@ -253,6 +253,8 @@ body {
 }
 .contact-content {
   max-width: 800px;
+  magin: 0 auto;
+  width: 100%;
   display: grid;
   gap: 2.5rem;   /* SPACE BETWEEN TITLE + FORM */
   text-align: center;
