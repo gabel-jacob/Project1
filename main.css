@@ -238,14 +238,13 @@ body {
 /* CONTACT */
 .contact-form {
   width: 100%;
-  max-width: 420px;
+  max-width: 600px;
   display: flex;
   flex-direction: column;
   gap: 1.2rem;   /* space between inputs */
   margin: 0 auto;
 }
 .contact-layout {
-  min-height: 75vh;
   display: grid;
   place-items: center;
   justify-content: center;   /* horizontal center */
