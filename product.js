@@ -53,6 +53,13 @@ function loadProduct() {
     "$" + product.price;
   document.getElementById("product-desc").textContent =
     product.description;
+  document.getElementById("add-btn").onclick = () => {
+  addToCart({
+    id: id,
+    name: product.name,
+    price: product.price
+  });
+};
 }
 
 document.addEventListener("DOMContentLoaded", loadProduct);
