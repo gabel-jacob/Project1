@@ -152,6 +152,7 @@ body {
   align-items: center;
 }
 .hero::before {
+  color: #FFFFFF;
   content: "";
   position: absolute;
   inset: 0;
@@ -168,6 +169,9 @@ body {
   color: #FFFFFF;
   font-size: 3rem;
   margin-bottom: 0.5rem;
+}
+.hero-content p {
+    color: #FFFFFF;
 }
 
 .btn {
