@@ -138,6 +138,7 @@ body {
 }
 
 .hero {
+  position: relative; 
   height: 75vh;
 
   background-image: url("pictures/QLnZAoA.jpeg");
