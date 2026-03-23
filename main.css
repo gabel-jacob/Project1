@@ -138,17 +138,29 @@ body {
 }
 
 .hero {
-  background-image: url("pictures/QLnZAoA.jpeg);
+  height: 75vh;
+
+  background-image: url("pictures/QLnZAoA.jpeg");
   background-size: cover;
   background-position: center;
-  min-height: 60vh;
+  background-repeat: no-repeat;
+
   display: flex;
-  align-items: center;
   justify-content: center;
-  text-align: center;
-  color: #fff;
+  align-items: center;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
 }
 
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
 .hero-content h1 {
   font-size: 3rem;
   margin-bottom: 0.5rem;
