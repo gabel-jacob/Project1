@@ -138,7 +138,7 @@ body {
 }
 
 .hero {
-  background-image: url('hero.jpg');
+  background-image: url("pictures/QLnZAoA.jpeg);
   background-size: cover;
   background-position: center;
   min-height: 60vh;
@@ -299,6 +299,4 @@ body {
   height: 60px;
   background: #ddd;
 }
-.hero {
-background-image: url("images/QLnZAoA.jpeg);
-}
+
