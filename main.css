@@ -138,6 +138,7 @@ body {
 }
 
 .hero {
+  color: #FFFFFF;
   position: relative; 
   height: 75vh;
 
@@ -164,6 +165,7 @@ body {
   color: #FFFFFF;
 }
 .hero-content h1 {
+  color: #FFFFFF;
   font-size: 3rem;
   margin-bottom: 0.5rem;
 }
