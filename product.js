@@ -40,3 +40,19 @@ const products = {
   }
 
 };
+function loadProduct() {
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get("id");
+
+  const product = products[id];
+  if (!product) return;
+
+  document.getElementById("product-img").src = product.image;
+  document.getElementById("product-name").textContent = product.name;
+  document.getElementById("product-price").textContent =
+    "$" + product.price;
+  document.getElementById("product-desc").textContent =
+    product.description;
+}
+
+document.addEventListener("DOMContentLoaded", loadProduct);
