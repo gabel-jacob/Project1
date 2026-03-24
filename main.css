@@ -292,8 +292,20 @@ body {
 }
 
 .item-image {
-  background: #e5e5e5;
-  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f5f5f5;
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+/* actual product image */
+.item-image img {
+  max-width: 100%;
+  max-height: 450px;   /* ← controls size */
+  object-fit: contain;
+  border-radius: 12px;
 }
 
 /* ABOUT */
