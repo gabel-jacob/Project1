@@ -1,4 +1,4 @@
-const products = {
+const product = {
 
   item1: {
     name: "6mm Acrylic Case for Gameboy/GBA/Virtual Boy Box",
