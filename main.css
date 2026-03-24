@@ -173,6 +173,10 @@ body {
 .hero-content p {
     color: #FFFFFF;
 }
+.hero-content h1,
+.hero-content p {
+  text-shadow: 0 2px 10px rgba(0,0,0,0.4);
+}
 
 .btn {
   display: inline-block;
