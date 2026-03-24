@@ -63,7 +63,3 @@ function loadShop() {
 }
 
 document.addEventListener("DOMContentLoaded", loadShop);
-};
-}
-
-document.addEventListener("DOMContentLoaded", loadProduct);
