@@ -1,75 +1,30 @@
-/* -------------------------
-   CART STORAGE HELPERS
-------------------------- */
-
-// get cart from localStorage
 function getCart() {
   return JSON.parse(localStorage.getItem("cart")) || [];
 }
 
-// save cart
 function saveCart(cart) {
   localStorage.setItem("cart", JSON.stringify(cart));
 }
 
-
-/* -------------------------
-   ADD TO CART
-------------------------- */
-
-function addToCart(product) {
+function addToCart(productId) {
   const cart = getCart();
-
-  // check if item already exists
-  const existing = cart.find(item => item.id === product.id);
-
-  if (existing) {
-    existing.quantity += 1;
-  } else {
-    cart.push({
-      ...product,
-      quantity: 1
-    });
-  }
-
+  cart.push(productId);
   saveCart(cart);
   updateCartCount();
 }
 
-
-/* -------------------------
-   CART COUNT (header icon)
-------------------------- */
+function removeFromCart(index) {
+  const cart = getCart();
+  cart.splice(index, 1);
+  saveCart(cart);
+  renderCart();
+  updateCartCount();
+}
 
 function updateCartCount() {
-  const cart = getCart();
-
-  const totalItems = cart.reduce(
-    (sum, item) => sum + item.quantity,
-    0
-  );
-
-  const counter = document.querySelector(".cart-count");
-  if (counter) {
-    counter.textContent = totalItems;
-  }
+  const el = document.querySelector(".cart-count");
+  if (!el) return;
+  el.textContent = getCart().length;
 }
 
-
-/* -------------------------
-   REMOVE ITEM
-------------------------- */
-
-function removeFromCart(id) {
-  let cart = getCart();
-  cart = cart.filter(item => item.id !== id);
-  saveCart(cart);
-  updateCartCount();
-}
-
-
-/* -------------------------
-   INIT ON PAGE LOAD
-------------------------- */
-
-document.addEventListener("DOMContentLoaded", updateCartCount);
+updateCartCount();
