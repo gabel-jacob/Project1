@@ -57,15 +57,20 @@
 <script>
   function loadProduct() {
     const params = new URLSearchParams(window.location.search);
-    const id = params.get("id");
-    const product = products[id];
-    if (!product) return;
+    let id = params.get("id");
 
-    document.getElementById("item-name").textContent = product.name;
-    document.getElementById("item-description").textContent = product.description;
-    document.getElementById("item-price").textContent = `$${product.price}`;
-    document.getElementById("item-img").src = product.image;
-    document.getElementById("item-img").alt = product.name;
+    // Set default item ID if none provided or invalid
+    if (!id || !product[id]) {
+      id = "item1"; // <-- replace "item1" with your default product's key
+    }
+
+    const p = product[id];
+
+    document.getElementById("item-name").textContent = p.name;
+    document.getElementById("item-description").textContent = p.description;
+    document.getElementById("item-price").textContent = `$${p.price}`;
+    document.getElementById("item-img").src = p.image;
+    document.getElementById("item-img").alt = p.name;
   }
 
   document.addEventListener("DOMContentLoaded", loadProduct);
