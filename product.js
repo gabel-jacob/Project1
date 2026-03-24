@@ -83,25 +83,27 @@ const products = {
   }
 
 };
-function loadProduct() {
-  const params = new URLSearchParams(window.location.search);
-  const id = params.get("id");
+function loadShop() {
+  const grid = document.getElementById("product-grid");
+  if (!grid) return;
 
-  const product = products[id];
-  if (!product) return;
+  Object.entries(products).forEach(([id, product]) => {
 
-  document.getElementById("product-img").src = product.image;
-  document.getElementById("product-name").textContent = product.name;
-  document.getElementById("product-price").textContent =
-    "$" + product.price;
-  document.getElementById("product-desc").textContent =
-    product.description;
-  document.getElementById("add-btn").onclick = () => {
-  addToCart({
-    id: id,
-    name: product.name,
-    price: product.price
+    const card = document.createElement("a");
+    card.href = `item.html?id=${id}`;
+    card.className = "product-card";
+
+    card.innerHTML = `
+      <img src="${product.image}" alt="${product.name}">
+      <h3>${product.name}</h3>
+      <p>$${product.price}</p>
+    `;
+
+    grid.appendChild(card);
   });
+}
+
+document.addEventListener("DOMContentLoaded", loadShop);
 };
 }
 
