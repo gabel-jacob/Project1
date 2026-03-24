@@ -3,83 +3,73 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Shop — Niko & Co</title>
-
+  <title>Item — Niko & Co</title>
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="main.css">
-
   <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Gajraj+One&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-  <header class="site-header">
-    <nav class="nav container">
-      <div class="header-left">
-        <a href="index.html" class="logo">Niko & Co</a> 
-      </div>
-      <ul class="menu">
-        <li><a href="shop.html">Shop</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <div class="header-right">
+
+<header class="site-header">
+  <nav class="nav container">
+    <div class="header-left">
+      <a href="index.html" class="logo">Niko & Co</a> 
+    </div>
+    <ul class="menu">
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="header-right">
       <a href="cart.html" class="cart-icon">
-      <i class="fas fa-shopping-cart"></i>
-      <span class="cart-count">0</span> 
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-count">0</span> 
       </a>
-      </div>
-    </nav>
-  </header>
+    </div>
+  </nav>
+</header>
 
 <a href="#" class="back-btn" onclick="history.back(); return false;">
   ← Back
 </a>
 
-  <main class="container item-layout">
-    <div class="item-image">
-      <img id="item-img" src="" alt="">
-    </div>
-    <div class="item-details">
-      <h1 id="item-name"></h1>
-      <p id="item-description"></p>
-      <p id="item-price"></p>
-    </div>
-  </main>
-
-  <footer class="site-footer">
-    <p>© 2026 Niko & Co</p>
-  </footer>
-
-  <script src="products.js"></script>
-
-
-  
-  <script>
-    function loadProduct() {
-      const params = new URLSearchParams(window.location.search);
-      const id = params.get("id");
-      const product = products[id];
-      if (!product) return;
-
-      document.getElementById("item-name").textContent = product.name;
-      document.getElementById("item-description").textContent = product.description;
-      document.getElementById("item-price").textContent = `$${product.price}`;
-      document.getElementById("item-img").src = product.image;
-      document.getElementById("item-img").alt = product.name;
-    }
-
-    document.addEventListener("DOMContentLoaded", loadProduct);
-  </script>
-
+<main class="container item-layout">
+  <div class="item-image">
+    <img id="item-img" src="" alt="">
+  </div>
+  <div class="item-details">
+    <h1 id="item-name"></h1>
+    <p id="item-description"></p>
+    <p id="item-price"></p>
     <button id="add-btn" class="btn">Add to Cart</button>
   </div>
 </main>
-<script src="product.js"></script>
+
 <footer class="site-footer">
   <p>© 2026 Niko & Co</p>
 </footer>
-<script src="product.js"></script>
+
+<!-- Scripts -->
+<script src="products.js"></script>
 <script src="cart.js"></script>
+<script>
+  function loadProduct() {
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+    const product = products[id];
+    if (!product) return;
+
+    document.getElementById("item-name").textContent = product.name;
+    document.getElementById("item-description").textContent = product.description;
+    document.getElementById("item-price").textContent = `$${product.price}`;
+    document.getElementById("item-img").src = product.image;
+    document.getElementById("item-img").alt = product.name;
+  }
+
+  document.addEventListener("DOMContentLoaded", loadProduct);
+</script>
+
 </body>
 </html>
