@@ -295,7 +295,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url("pictures/item3.jpg") center/cover no-repeat; /* ← use your item3 image path */
+  background: url("pictures/DRWBYtv.jpeg") center/cover no-repeat; /* ← use your item3 image path */
   height: 350px;
   border-radius: 12px; /* optional to match item styling */
 }
