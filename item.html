@@ -56,15 +56,9 @@
 <script src="cart.js"></script>
 <script>
   function loadProduct() {
-    const params = new URLSearchParams(window.location.search);
-    let id = params.get("id");
-
-    // Set default item ID if none provided or invalid
-    if (!id || !product[id]) {
-      id = "item1"; // <-- replace "item1" with your default product's key
-    }
-
-    const p = product[id];
+    // Always use this default product ID
+    const defaultId = "item2"; // <-- set this to whichever product you want as default
+    const p = product[defaultId];
 
     document.getElementById("item-name").textContent = p.name;
     document.getElementById("item-description").textContent = p.description;
