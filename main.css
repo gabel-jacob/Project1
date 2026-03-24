@@ -295,9 +295,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #f5f5f5;
-  border-radius: 12px;
-  padding: 2rem;
+  background: url("pictures/item3.jpg") center/cover no-repeat; /* ← use your item3 image path */
+  height: 350px;
+  border-radius: 12px; /* optional to match item styling */
 }
 
 /* actual product image */
