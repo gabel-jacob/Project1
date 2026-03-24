@@ -372,4 +372,16 @@ body {
   height: 60px;
   background: #ddd;
 }
+.back-btn {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  text-decoration: none;
+  color: #222;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
 
+.back-btn:hover {
+  color: #52784c;
+}
