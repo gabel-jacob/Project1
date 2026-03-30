@@ -44,6 +44,17 @@
     <p id="item-description"></p>
     <p id="item-price"></p>
     <button id="add-btn" class="btn">Add to Cart</button>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const btn = document.getElementById("add-btn");
+      
+        btn.addEventListener("click", () => {
+          if (!currentProductId) return;
+      
+          addToCart(currentProductId);
+        });
+      });
+  </script>
   </div>
 </main>
 
