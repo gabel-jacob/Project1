@@ -10,16 +10,16 @@ function loadShop() {
   const grid = document.getElementById("product-grid");
   if (!grid) return;
 
-  Object.entries(products).forEach(([id, product]) => {
+  Object.entries(products).forEach(([id, products]) => {
 
     const card = document.createElement("a");
     card.href = `item.html?id=${id}`;
     card.className = "product-card";
 
     card.innerHTML = `
-      <img src="${product.image}" alt="${product.name}">
-      <h3>${product.name}</h3>
-      <p>$${product.price}</p>
+      <img src="${products.image}" alt="${products.name}">
+      <h3>${products.name}</h3>
+      <p>$${products.price}</p>
     `;
 
     grid.appendChild(card);
