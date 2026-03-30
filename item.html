@@ -34,7 +34,27 @@
 <a href="#" class="back-btn" onclick="history.back(); return false;">
   ← Back
 </a>
+<script>
+let currentProductId = null;
 
+function loadProduct() {
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get("id");
+
+  const p = products[id];
+  if (!p) return;
+
+  currentProductId = id;
+
+  document.getElementById("item-name").textContent = p.name;
+  document.getElementById("item-description").textContent = p.description;
+  document.getElementById("item-price").textContent = `$${p.price}`;
+  document.getElementById("item-img").src = p.image;
+  document.getElementById("item-img").alt = p.name;
+}
+
+document.addEventListener("DOMContentLoaded", loadProduct);
+</script>
 <main class="container item-layout">
   <div class="item-image">
     <img id="item-img" src="" alt="">
