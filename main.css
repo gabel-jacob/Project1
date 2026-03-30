@@ -315,7 +315,7 @@ body {
 }
 
 .about-image {
-  background: #e5e5e5;
+  background: url("pictures/DRWBYtv.jpeg") center/cover no-repeat;
   height: 350px;
 }
 
