@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Shop — Niko & Co</title>
+  <title>Work — Jacob Gabel</title>
 
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="main.css">
@@ -12,79 +12,82 @@
   <link href="https://fonts.googleapis.com/css2?family=Gajraj+One&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 </head>
+
 <body>
 
   <header class="site-header">
     <nav class="nav container">
       <div class="header-left">
-        <a href="index.html" class="logo">Niko & Co</a> 
+        <a href="index.html" class="logo">Jacob Gabel</a>
       </div>
+
       <ul class="menu">
-        <li><a href="shop.html">Shop</a></li>
+        <li><a href="projects.html">Work</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
+
       <div class="header-right">
-      <a href="cart.html" class="cart-icon">
-      <i class="fas fa-shopping-cart"></i>
-      <span class="cart-count">0</span> 
-      </a>
+        <a href="contact.html" class="nav-cta">Hire Me</a>
       </div>
     </nav>
-    
   </header>
 
-<main class="container shop-layout">
+  <main class="container work-page">
 
-  <!-- sidebar -->
-  <aside class="filters">
-    <h3>Filter</h3>
-    <label><input type="checkbox"> Nintendo</label>
-    <label><input type="checkbox"> 3DS</label>
-    <label><input type="checkbox">Gamecube</label>
-  </aside>
+    <section class="work-intro">
+      <h1>selected work</h1>
+      <p>
+        A collection of projects across frontend development, UX design,
+        systems programming, and database systems.
+      </p>
+    </section>
 
-  <!-- products -->
-  <section class="product-grid">
+    <section class="project-grid">
 
-  <a href="item.html?id=item1" class="product-card">
-    <img src="pictures/DRWBYtv.jpeg" alt="Item 1">
-    <h3>6mm Acrylic Case for Gameboy/GBA/Virtual Boy Box</h3>
-    <p>$25</p>
-  </a>
-  <a href="item.html?id=item2" class="product-card">
-    <img src="pictures/FqSCOvL.jpeg" alt="Item 2">
-    <h3>6mm Acrylic Case for 3DS/N3DS/DS lite system</h3>
-    <p>$20</p>
-  </a>
-  <a href="item.html?id=item3" class="product-card">
-    <img src="pictures/QLnZAoA.jpeg" alt="Item 3">
-    <h3>3mm Acrylic Case for Pokemon 20th Anniversary Box </h3>
-    <p>$10</p>
-  </a>  
-  <a href="item.html?id=item4" class="product-card">
-    <img src="pictures/VNhvvaN.jpeg" alt="Item 4">
-    <h3>PETG N64 Cartridge Protectors with Etching</h3>
-    <p>$1</p>
-  </a>  
-  <a href="item.html?id=item5" class="product-card">
-    <img src="pictures/p995ibU.jpeg" alt="Item 5">
-    <h3>3mm Acyrilic Case for 3DS XL/N3DS XL Box</h3>
-    <p>$20</p>
-  </a>
-  <a href="item.html?id=item6" class="product-card">
-    <img src="pictures/zBYUKh5.jpeg" alt="Item 6">
-    <h3>3mm Acrylic Case for Gamecube/WII/WIIU/XBOX/PS3/DVD</h3>
-    <p>$15</p>
-  </a>  
-  </section>
+      <a href="project.html?id=project1" class="product-card">
+        <img src="pictures/DRWBYtv.jpeg" alt="Portfolio website project">
+        <h3>Portfolio Website Redesign</h3>
+        <p>Frontend Development / HTML / CSS / JavaScript</p>
+      </a>
 
-</main>
+      <a href="project.html?id=project2" class="product-card">
+        <img src="pictures/FqSCOvL.jpeg" alt="Parking app UX project">
+        <h3>GopherParkLive</h3>
+        <p>UX Research / UI Design / Prototyping</p>
+      </a>
 
-<footer class="site-footer">
-  <p>© 2026 Niko & Co</p>
-</footer>
-<script src="products.js"></script>
-<script src="cart.js"></script>
+      <a href="project.html?id=project3" class="product-card">
+        <img src="pictures/QLnZAoA.jpeg" alt="Database systems project">
+        <h3>PostgreSQL Buffer Manager Lab</h3>
+        <p>C / Database Systems / Query Optimization</p>
+      </a>
+
+      <a href="project.html?id=project4" class="product-card">
+        <img src="pictures/VNhvvaN.jpeg" alt="Memory allocator project">
+        <h3>Explicit List Memory Allocator</h3>
+        <p>C / Systems Programming / Memory Management</p>
+      </a>
+
+      <a href="project.html?id=project5" class="product-card">
+        <img src="pictures/p995ibU.jpeg" alt="Ecommerce storefront project">
+        <h3>Niko & Co Storefront</h3>
+        <p>Frontend Development / Ecommerce UI</p>
+      </a>
+
+      <a href="project.html?id=project6" class="product-card">
+        <img src="pictures/zBYUKh5.jpeg" alt="UX usability testing project">
+        <h3>Usability Testing Study</h3>
+        <p>HCI / User Research / Design Evaluation</p>
+      </a>
+
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Jacob Gabel</p>
+  </footer>
+
 </body>
 </html>
