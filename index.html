@@ -3,61 +3,87 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Home - Niko & Co</title>
+  <title>Jacob Gabel — Portfolio</title>
+
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="main.css">
-  
+
   <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Gajraj+One&display=swap" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" >
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 </head>
+
 <body>
+
   <header class="site-header">
     <nav class="nav container">
       <div class="header-left">
-        <a href="index.html" class="logo">Niko & Co</a> 
+        <a href="index.html" class="logo">Jacob Gabel</a>
       </div>
+
       <ul class="menu">
-        <li><a href="shop.html">Shop</a></li>
+        <li><a href="projects.html">Work</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
+
       <div class="header-right">
-      <a href="cart.html" class="cart-icon">
-      <i class="fas fa-shopping-cart"></i>
-      <span class="cart-count">0</span> 
-      </a>
+        <a href="contact.html" class="nav-cta">Hire Me</a>
       </div>
     </nav>
-    
   </header>
 
   <section class="hero">
     <div class="hero-content">
-      <h1>minimal designs</h1>
-      <p>retro inspiration, modern applications</p>
-      <a href="shop.html" class="btn">Shop Now</a>
+      <h1>software developer & designer</h1>
+      <p>building clean, modern digital experiences through code, UX, and visual design</p>
+      <a href="projects.html" class="btn">View Work</a>
     </div>
   </section>
 
-  <main class="container grid-section">
-    <a href="item.html?id=item1" class="product-card">
-    <img src="pictures/DRWBYtv.jpeg" alt="Item 1">
-  </a>
-  <a href="item.html?id=item2" class="product-card">
-    <img src="pictures/FqSCOvL.jpeg" alt="Item 2">
-  </a>
-  <a href="item.html?id=item3" class="product-card">
-    <img src="pictures/QLnZAoA.jpeg" alt="Item 3">
-  </a>  
-  <a href="item.html?id=item4" class="product-card">
-    <img src="pictures/VNhvvaN.jpeg" alt="Item 4">
-  </a>  
+  <main class="container">
+
+    <section class="intro-section">
+      <h2>Featured Work</h2>
+      <p>
+        A selection of projects focused on frontend development, UX research,
+        interface design, and systems programming.
+      </p>
+    </section>
+
+    <section class="grid-section">
+
+      <a href="project.html?id=project1" class="product-card">
+        <img src="pictures/DRWBYtv.jpeg" alt="Portfolio project preview">
+        <h3>Portfolio Redesign</h3>
+        <p>Frontend Development</p>
+      </a>
+
+      <a href="project.html?id=project2" class="product-card">
+        <img src="pictures/FqSCOvL.jpeg" alt="UX app project preview">
+        <h3>Parking Assistant App</h3>
+        <p>UX / UI Design</p>
+      </a>
+
+      <a href="project.html?id=project3" class="product-card">
+        <img src="pictures/QLnZAoA.jpeg" alt="Database project preview">
+        <h3>Database Systems Lab</h3>
+        <p>PostgreSQL / C</p>
+      </a>
+
+      <a href="project.html?id=project4" class="product-card">
+        <img src="pictures/VNhvvaN.jpeg" alt="Systems project preview">
+        <h3>Memory Allocator</h3>
+        <p>C / Systems Programming</p>
+      </a>
+
+    </section>
+
   </main>
+
   <footer class="site-footer">
-    <p>© 2026 Niko & Co</p>
+    <p>© 2026 Jacob Gabel</p>
   </footer>
-<script src="cart.js"></script>
-<script src="product.js"></script>
+
 </body>
 </html>
