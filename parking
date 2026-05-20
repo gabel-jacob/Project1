@@ -1,0 +1,32 @@
+<section class="figma-showcase">
+
+  <div class="figma-text">
+    <span>featured project</span>
+
+    <h2>GopherParkLive</h2>
+
+    <p>
+      A personalized campus parking assistant designed
+      through UX research, accessibility testing,
+      prototyping, and user-centered interaction design.
+    </p>
+
+    <div class="project-tags">
+      <span>Figma</span>
+      <span>UX Research</span>
+      <span>Accessibility</span>
+      <span>Prototyping</span>
+    </div>
+  </div>
+
+  <div class="figma-embed">
+    <iframe
+      style="border: 1px solid rgba(255,255,255,0.08);"
+      width="100%"
+      height="520"
+      src="https://embed.figma.com/proto/8bAKfbm0qWi2Kx5B3t6DTj/GopherPark?node-id=996-1609&p=f&viewport=27%2C-99%2C0.07&scaling=scale-down&content-scaling=fixed&page-id=996%3A935&embed-host=share"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+</section>
