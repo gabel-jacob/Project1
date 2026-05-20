@@ -535,3 +535,51 @@ body {
 .contact-links a:hover {
   color: #52784c;
 }
+.nav-cta {
+  text-decoration: none;
+  color: #222;
+  border: 1px solid #222;
+  padding: 0.55rem 1rem;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.nav-cta:hover {
+  background: #222;
+  color: white;
+}
+
+.contact-intro {
+  text-align: center;
+  display: grid;
+  gap: 1rem;
+}
+
+.contact-intro h1 {
+  font-size: 3rem;
+  text-transform: lowercase;
+  letter-spacing: 2px;
+}
+
+.contact-intro p {
+  max-width: 650px;
+  margin: 0 auto;
+  opacity: 0.85;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.contact-links a {
+  text-decoration: none;
+  color: #222;
+  transition: color 0.3s ease;
+}
+
+.contact-links a:hover {
+  color: #52784c;
+}
