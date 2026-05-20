@@ -310,13 +310,17 @@ body {
 /* ABOUT */
 .about-layout {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  grid-template-columns: 420px 1fr;
+  gap: 4rem;
+  align-items: start;
+  padding: 4rem 0;
 }
 
-.about-image {
-  background: url("pictures/DRWBYtv.jpeg") center/cover no-repeat;
-  height: 350px;
+.about-image img {
+  width: 100%;
+  height: 78vh;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
 /* CONTACT */
@@ -444,19 +448,23 @@ body {
   padding: 4rem 0;
 }
 
-.about-text {
-  display: grid;
-  gap: 1.5rem;
-}
-
 .about-text h1 {
-  font-size: 3rem;
+  font-size: 4rem;
+  margin-bottom: 1rem;
   text-transform: lowercase;
   letter-spacing: 2px;
 }
 
+.about-text {
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
 .about-text p {
-  max-width: 650px;
+  line-height: 1.9;
+  font-size: 0.95rem;
   opacity: 0.9;
 }
 
