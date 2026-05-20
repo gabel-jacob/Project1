@@ -384,3 +384,31 @@ body {
 .back-btn:hover {
   color: #52784c;
 }
+.nav-cta {
+  text-decoration: none;
+  color: #222;
+  font-weight: bold;
+  border: 1px solid #222;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.nav-cta:hover {
+  background: #222;
+  color: #fff;
+}
+
+.intro-section {
+  text-align: center;
+  padding: 4rem 0 1rem;
+}
+
+.intro-section h2 {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.intro-section p {
+  max-width: 700px;
+  margin: 0 auto;
+}
