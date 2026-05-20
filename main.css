@@ -570,3 +570,53 @@ background: rgba(0,0,0,0.48);
 html {
   scroll-behavior: smooth;
 }
+.figma-showcase {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 4rem;
+
+  align-items: start;
+
+  padding: 8rem 0;
+}
+
+.figma-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.figma-text span {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: 0.6;
+  font-size: 0.8rem;
+}
+
+.figma-text h2 {
+  font-size: 4rem;
+  line-height: 0.95;
+  text-transform: lowercase;
+}
+
+.figma-text p {
+  line-height: 1.9;
+  opacity: 0.85;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.project-tags span {
+  border: 1px solid #222;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.8rem;
+}
+
+.figma-embed iframe {
+  width: 100%;
+  border-radius: 12px;
+}
