@@ -352,41 +352,37 @@ body {
 
 /* PROJECT CARDS */
 .product-card {
-  text-decoration: none;
-  color: inherit;
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-  padding: 1rem;
-  border: 1px solid var(--border);
-  border-radius: 24px;
-  background: var(--surface);
-  backdrop-filter: blur(14px);
-  box-shadow: 0 16px 45px rgba(0,0,0,0.06);
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
-}
+  border-top: 1px solid #111;
 
-.product-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 24px 70px rgba(0,0,0,0.12);
+  padding-top: 1rem;
+
+  text-decoration: none;
+
+  color: inherit;
 }
 
 .product-card img {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 4 / 5;
+
   object-fit: cover;
-  border-radius: 18px;
+
+  margin-bottom: 1rem;
 }
 
 .product-card h3 {
-  font-size: 1.4rem;
-  line-height: 1.2;
+  font-size: 1.2rem;
+
+  margin-bottom: 0.4rem;
 }
 
 .product-card p {
-  color: var(--muted);
-}
+  font-size: 0.9rem;
 
+  opacity: 0.65;
+
+  font-family: 'Inter', sans-serif;
+}
 /* WORK PAGE */
 .work-page {
   padding-top: 4rem;
