@@ -818,3 +818,163 @@ p {
   color: var(--accent);
   border-color: var(--accent);
 }
+/* ============================= */
+/* CLEAN TE-STYLE NAV OVERRIDE */
+/* ============================= */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(239, 238, 232, 0.96);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(10px);
+  padding: 0.75rem 0;
+}
+
+.site-header .nav {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: stretch;
+  min-height: 76px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  padding: 0;
+  box-shadow: none;
+}
+
+.header-left,
+.header-right {
+  display: flex;
+  align-items: stretch;
+}
+
+.header-left {
+  border-right: 1px solid var(--line);
+}
+
+.header-right {
+  border-left: 1px solid var(--line);
+}
+
+.logo-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.2rem;
+  height: 100%;
+  padding: 0 1.6rem;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.logo-block:visited {
+  color: var(--text);
+}
+
+.logo {
+  font-family: "Gajraj One", sans-serif;
+  font-size: 1.65rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  line-height: 1;
+  color: var(--text);
+}
+
+.logo-sub {
+  display: block;
+  font-size: 0.62rem;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(120px, 1fr));
+  list-style: none;
+  height: 100%;
+}
+
+.menu li {
+  border-right: 1px solid var(--line);
+}
+
+.menu li:last-child {
+  border-right: none;
+}
+
+.menu li a {
+  height: 100%;
+  min-height: 76px;
+  padding: 0 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.15rem;
+  color: var(--text);
+  text-decoration: none;
+  transition: background 0.25s ease;
+}
+
+.menu li a:visited {
+  color: var(--text);
+}
+
+.menu li a:hover {
+  background: #e5e1d6;
+}
+
+.nav-num {
+  display: block;
+  font-size: 0.68rem;
+  color: var(--muted);
+  letter-spacing: 1px;
+  line-height: 1;
+}
+
+.nav-title {
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  line-height: 1.1;
+}
+
+.nav-sub {
+  display: none;
+}
+
+.nav-cta {
+  height: 100%;
+  min-height: 76px;
+  padding: 0 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 700;
+  background: transparent;
+  border: none;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.nav-cta:visited {
+  color: var(--text);
+}
+
+.nav-cta:hover {
+  background: var(--text);
+  color: var(--bg);
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  background: var(--accent);
+}
