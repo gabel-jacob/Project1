@@ -142,47 +142,43 @@ p {
   font-weight: 500;
 }
 
-.menu {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  list-style: none;
-  height: 100%;
-}
-
-.menu li {
-  border-right: 1px solid var(--line);
-}
-
-.menu li:last-child {
-  border-right: none;
-}
-
 .menu li a {
-  height: 100%;
-  min-height: 82px;
-  padding: 1rem 1.4rem;
-  display: grid;
-  align-content: center;
-  gap: 0.2rem;
-  text-decoration: none;
-  color: var(--text);
-  transition: background 0.25s ease;
+  position: relative;
+}
+
+.menu li a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 3px;
+  width: 0;
+  background: var(--accent);
+  transition: width 0.25s ease;
+}
+
+.menu li a:hover::before {
+  width: 100%;
 }
 
 .menu li a:hover {
-  background: #e5e1d6;
+  background: #e4e0d5;
 }
 
+.nav-title {
+  transition: transform 0.25s ease;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.menu li a:hover .nav-title {
+  transform: translateX(4px);
+}
 .nav-num {
   font-size: 0.68rem;
   color: var(--muted);
   letter-spacing: 1px;
-}
-
-.nav-title {
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
 }
 
 .nav-sub {
@@ -427,6 +423,7 @@ p {
   color: var(--text);
   border-top: 1px solid var(--text);
   padding-top: 1rem;
+  overflow: hidden;
 }
 
 .project-number {
@@ -449,9 +446,16 @@ p {
   aspect-ratio: 4 / 5;
   object-fit: cover;
   filter: saturate(0.95) contrast(1.02);
+  transition: transform 0.45s ease, filter 0.45s ease;
+}
+.project-tile:hover img {
+  transform: scale(1.025);
+  filter: saturate(1.05) contrast(1.08);
 }
 
-.project-meta {
+.project-tile:hover h3 {
+  color: var(--accent);
+}{
   font-size: 0.82rem;
   color: var(--muted);
   text-transform: uppercase;
