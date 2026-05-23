@@ -80,7 +80,16 @@ p {
   backdrop-filter: blur(10px);
   padding: 0.9rem 0;
 }
-
+.site-footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--line);
+  padding: 1rem;
+  font-size: 0.75rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
 .site-header .nav {
   display: grid;
   grid-template-columns: auto 1fr auto;
