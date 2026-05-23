@@ -366,7 +366,7 @@ p {
   letter-spacing: 1px;
   color: white;
   text-decoration: none;
-  background: linear-gradient(135deg, var(--accent), #6f8f72, #d8b98f);
+  background: linear-gradient(135deg, var(--accent), #6f8f72);
   position: relative;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
