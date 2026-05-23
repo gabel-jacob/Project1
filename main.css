@@ -218,6 +218,7 @@ p {
   display: inline-block;
 }
 /* HERO */
+
 .hero {
   position: relative;
   min-height: 86vh;
@@ -258,7 +259,34 @@ p {
   align-self: end;
   padding-bottom: 7rem;
 }
+.hero-spec {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  max-width: 460px;
+  margin-top: 3rem;
+  border-top: 1px solid var(--line);
+}
 
+.hero-spec div {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  border-bottom: 1px solid var(--line);
+  padding: 0.65rem 0;
+}
+
+.hero-spec span {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--muted);
+}
+
+.hero-spec strong {
+  font-size: 0.82rem;
+  font-weight: 500;
+  text-transform: lowercase;
+}
 .hero-tag {
   display: inline-block;
   margin-bottom: 2rem;
