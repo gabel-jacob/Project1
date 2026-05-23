@@ -1,11 +1,21 @@
 :root {
   --bg: #efeee8;
   --paper: #f7f6f1;
-  --text: #111;
-  --muted: #66645e;
-  --line: #d7d3ca;
-  --accent: #0b5b42;
-  --accent-orange: #ff4b00;
+  --text: #111111;
+  --muted: #6a6861;
+
+  --line: #d4d0c8;
+
+  --industrial-gray: #4f514f;
+  --dark-gray: #2b2d2b;
+  --light-gray: #c9c7bf;
+
+  --accent: #ff4b00;        /* TE-style orange */
+  --accent-dark: #b63200;
+
+  --olive: #405441;
+  --cream: #efeee8;
+
   --shadow: 0 18px 50px rgba(0, 0, 0, 0.08);
 }
 
@@ -44,15 +54,15 @@ p {
 .system-strip {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  background: #d9d6ce;
   border-bottom: 1px solid var(--line);
-  background: #e9e5dc;
 }
 
 .system-strip span {
   padding: 0.55rem 1rem;
   border-right: 1px solid var(--line);
   font-size: 0.68rem;
-  color: var(--muted);
+  color: var(--industrial-gray);
   text-transform: uppercase;
   letter-spacing: 1.5px;
 }
@@ -384,7 +394,8 @@ p {
 
 .project-number {
   font-size: 0.8rem;
-  opacity: 0.45;
+  color: var(--accent);
+  opacity: 0.85;
   letter-spacing: 1px;
 }
 
@@ -409,7 +420,15 @@ p {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-
+.project-type {
+  width: fit-content;
+  border: 1px solid var(--line);
+  padding: 0.25rem 0.5rem;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--muted);
+}
 /* FALLBACK / OLD PROJECT CARD SUPPORT */
 .product-card {
   border-top: 1px solid var(--text);
