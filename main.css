@@ -103,168 +103,132 @@ p {
 }
 
 /* =========================
-   MODERN ANIMATED WORDMARK
-   ========================= */
+   CLEAN MODERN WORDMARK
+========================= */
 
 .logo-block {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
+  justify-content: center;
+  gap: 0.42rem;
+  height: 100%;
+  padding: 0 1.6rem;
+  min-width: max-content;
   text-decoration: none;
-  line-height: 1;
-  gap: 0.55rem;
+  color: var(--text);
+}
+
+.logo-block:visited {
+  color: var(--text);
 }
 
 .logo-wordmark {
   display: inline-flex;
   align-items: baseline;
-  gap: 0.35rem;
-  position: relative;
-  font-family: "Syne", "Inter", sans-serif;
-  font-size: 3rem;
-  font-weight: 700;
-  letter-spacing: -0.05em;
-  text-transform: uppercase;
+  gap: 0.42rem;
+
+  font-family: "Space Grotesk", "Inter", sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 0.9;
+  letter-spacing: -0.035em;
+
+  text-transform: none;
+  white-space: nowrap;
 }
 
-.logo-jacob {
-  color: #f5f7fb;
-  position: relative;
-  display: inline-block;
-  animation: jacobBreath 6s ease-in-out infinite;
+.logo-name {
+  color: var(--text);
 }
 
-.logo-gabel {
+.logo-accent {
   position: relative;
-  display: inline-block;
-  color: transparent;
+  color: var(--accent-2);
+}
+
+/* animated accent line, not animated letters */
+.logo-accent::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.22rem;
+
+  height: 2px;
   background: linear-gradient(
     90deg,
-    #b68cff 0%,
-    #8ea8ff 35%,
-    #67e8f9 55%,
-    #b68cff 100%
-  );
-  background-size: 220% 100%;
-  background-clip: text;
-  -webkit-background-clip: text;
-  animation:
-    gabelGradient 8s linear infinite,
-    gabelFloat 5s ease-in-out infinite;
-}
-
-/* subtle moving highlight sweep */
-.logo-gabel::after {
-  content: "Gabel";
-  position: absolute;
-  inset: 0;
-  color: transparent;
-  background: linear-gradient(
-    110deg,
     transparent 0%,
-    transparent 40%,
-    rgba(255,255,255,0.9) 48%,
-    transparent 56%,
+    var(--accent) 30%,
+    var(--cyan) 55%,
+    var(--accent-2) 80%,
     transparent 100%
   );
-  background-size: 220% 100%;
-  background-clip: text;
-  -webkit-background-clip: text;
-  animation: gabelSweep 4.8s ease-in-out infinite;
-  pointer-events: none;
-  mix-blend-mode: screen;
-}
 
-/* soft ghost echo */
-.logo-gabel::before {
-  content: "Gabel";
-  position: absolute;
-  inset: 0;
-  color: rgba(182, 140, 255, 0.18);
-  transform: translate(0.04em, 0.02em);
-  filter: blur(2px);
-  pointer-events: none;
-  animation: gabelGhost 6s ease-in-out infinite;
+  background-size: 220% 100%;
+  opacity: 0.75;
+
+  animation: wordmarkScan 4.8s ease-in-out infinite;
 }
 
 .logo-sub {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+
   font-family: "Inter", sans-serif;
-  font-size: 0.82rem;
-  font-weight: 500;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  letter-spacing: 0.28em;
-  color: #aeb7d6;
-  opacity: 0.92;
+  color: var(--muted);
 }
 
-/* hover = a little more alive, not crazy */
-.logo-block:hover .logo-gabel {
-  animation-duration: 5s, 3.5s;
+.mini-signal {
+  width: 6px;
+  height: 6px;
+  background: var(--accent);
+  box-shadow: 0 0 10px rgba(80, 250, 123, 0.7);
+  animation: signalPulse 2.4s ease-in-out infinite;
 }
 
-.logo-block:hover .logo-gabel::after {
-  animation-duration: 2.8s;
+.logo-block:hover .logo-accent::after {
+  animation-duration: 2.4s;
+  opacity: 1;
 }
 
-.logo-block:hover .logo-sub {
-  color: #d1d8f5;
+.logo-block:hover .logo-accent {
+  color: var(--cyan);
 }
 
-/* animations */
-@keyframes jacobBreath {
-  0%, 100% {
-    transform: translateY(0);
-    letter-spacing: -0.05em;
-  }
-  50% {
-    transform: translateY(-1px);
-    letter-spacing: -0.04em;
-  }
-}
-
-@keyframes gabelGradient {
-  0% { background-position: 0% 50%; }
-  100% { background-position: 200% 50%; }
-}
-
-@keyframes gabelFloat {
-  0%, 100% {
-    transform: translateY(0px);
-    letter-spacing: -0.05em;
-  }
-  50% {
-    transform: translateY(-1px);
-    letter-spacing: -0.03em;
-  }
-}
-
-@keyframes gabelSweep {
+@keyframes wordmarkScan {
   0% {
-    background-position: 160% 0;
-    opacity: 0;
+    background-position: 180% 0;
+    opacity: 0.25;
   }
-  10% {
-    opacity: 0.0;
-  }
+
   35% {
-    opacity: 1;
+    opacity: 0.9;
   }
-  60% {
-    opacity: 0.4;
+
+  70% {
+    opacity: 0.55;
   }
+
   100% {
-    background-position: -60% 0;
-    opacity: 0;
+    background-position: -80% 0;
+    opacity: 0.25;
   }
 }
 
-@keyframes gabelGhost {
+@keyframes signalPulse {
   0%, 100% {
-    transform: translate(0.04em, 0.02em);
-    opacity: 0.18;
+    opacity: 0.45;
+    transform: scale(1);
   }
+
   50% {
-    transform: translate(0.07em, 0.01em);
-    opacity: 0.28;
+    opacity: 1;
+    transform: scale(1.25);
   }
 }
 /* NAV LINKS */
