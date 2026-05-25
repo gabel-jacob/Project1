@@ -1247,3 +1247,112 @@ p {
   background: var(--accent);
   box-shadow: 0 0 14px rgba(80, 250, 123, 0.8);
 }
+/* =========================
+   LOGO HOVER REFINEMENT
+========================= */
+
+.logo-block,
+.logo-block:link,
+.logo-block:visited {
+  height: 100%;
+  min-width: 300px;
+  padding: 0 1.6rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.48rem;
+
+  color: var(--text);
+  text-decoration: none !important;
+
+  background: transparent;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.logo-wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+
+  font-family: "Inter", sans-serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.035em;
+
+  text-transform: lowercase;
+  white-space: nowrap;
+}
+
+.logo-name {
+  color: var(--text);
+  transition: color 0.25s ease;
+}
+
+.logo-divider {
+  color: var(--muted);
+  font-weight: 400;
+  opacity: 0.65;
+  transition: color 0.25s ease, opacity 0.25s ease;
+}
+
+.logo-accent {
+  color: var(--accent);
+  transition:
+    color 0.25s ease,
+    background 0.25s ease,
+    padding 0.25s ease;
+}
+
+.logo-signal {
+  width: 7px;
+  height: 7px;
+  margin-left: 0.1rem;
+  background: var(--accent);
+  box-shadow: 0 0 12px rgba(80, 250, 123, 0.7);
+  transition:
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.logo-sub {
+  font-family: "Inter", sans-serif;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--muted);
+  transition: color 0.25s ease;
+}
+
+/* hover: same family as Hire Me */
+.logo-block:hover {
+  background: var(--accent);
+}
+
+.logo-block:hover .logo-name {
+  color: var(--bg);
+}
+
+.logo-block:hover .logo-divider {
+  color: var(--bg);
+  opacity: 0.75;
+}
+
+.logo-block:hover .logo-accent {
+  color: var(--text);
+  background: var(--bg);
+  padding: 0.08rem 0.3rem;
+}
+
+.logo-block:hover .logo-signal {
+  background: var(--bg);
+  box-shadow: none;
+}
+
+.logo-block:hover .logo-sub {
+  color: var(--bg);
+}
