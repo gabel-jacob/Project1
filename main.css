@@ -178,9 +178,14 @@ p {
 }
 /* make sure the Hire Me button does not wrap */
 .nav-cta {
+  text-decoration: none;
   white-space: nowrap;
   min-width: 140px;
   justify-content: center;
+}
+
+.nav-cta:hover {
+  text-decoration: none;
 }
 /* NAV LINKS */
 .menu {
