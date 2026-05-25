@@ -103,7 +103,7 @@ p {
 }
 
 /* =========================
-   LOWERCASE PIXEL-MORPH LOGO
+   CLEAN STATIC WORDMARK
 ========================= */
 
 .logo-block {
@@ -114,8 +114,8 @@ p {
   height: 100%;
   padding: 0 1.6rem;
   min-width: max-content;
-  text-decoration: none;
   color: var(--text);
+  text-decoration: none;
 }
 
 .logo-block:visited {
@@ -123,143 +123,41 @@ p {
 }
 
 .logo-wordmark {
-  position: relative;
-  display: inline-block;
-  line-height: 0.9;
-  white-space: nowrap;
-  min-height: 1em;
-}
-
-.logo-live,
-.logo-pixel {
-  display: block;
-  text-transform: lowercase;
-}
-
-.logo-live {
-  position: relative;
-  z-index: 1;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35rem;
 
   font-family: "Inter", sans-serif;
-  font-size: 2.05rem;
-  font-weight: 700;
+  font-size: 2rem;
+  font-weight: 750;
+  line-height: 0.95;
   letter-spacing: -0.055em;
-  color: #f5f7fb;
 
-  animation: readableFade 6.2s ease-in-out infinite;
+  text-transform: lowercase;
+  white-space: nowrap;
 }
 
-.logo-pixel {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  pointer-events: none;
+.logo-name {
+  color: var(--text);
+}
 
-  font-family: "Silkscreen", monospace;
-  font-size: 1.92rem;
-  font-weight: 700;
-  letter-spacing: -0.04em;
-  color: #8be9fd;
-
-  opacity: 0;
-  filter: blur(6px);
-  transform: translateY(0.02em);
-  mix-blend-mode: screen;
-
-  animation: pixelMorph 6.2s ease-in-out infinite;
+.logo-accent {
+  color: var(--accent-2);
+  transition: color 0.25s ease;
 }
 
 .logo-sub {
   font-family: "Inter", sans-serif;
-  font-size: 0.64rem;
+  font-size: 0.62rem;
   font-weight: 600;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--muted);
 }
 
-/* readable layer gently fades while pixel layer peaks */
-@keyframes readableFade {
-  0%, 18%, 100% {
-    opacity: 1;
-    filter: blur(0px);
-  }
-
-  35% {
-    opacity: 0.96;
-    filter: blur(0px);
-  }
-
-  48% {
-    opacity: 0.72;
-    filter: blur(0.2px);
-  }
-
-  58% {
-    opacity: 0.62;
-    filter: blur(0.45px);
-  }
-
-  72% {
-    opacity: 0.86;
-    filter: blur(0px);
-  }
+.logo-block:hover .logo-accent {
+  color: var(--cyan);
 }
-
-/* pixel version gradually appears, sharpens, then disappears */
-@keyframes pixelMorph {
-  0%, 16%, 100% {
-    opacity: 0;
-    filter: blur(6px);
-    transform: translateY(0.02em);
-  }
-
-  28% {
-    opacity: 0.12;
-    filter: blur(4px);
-    transform: translateY(0.02em);
-  }
-
-  40% {
-    opacity: 0.35;
-    filter: blur(2.2px);
-    transform: translateY(0.015em);
-  }
-
-  50% {
-    opacity: 0.72;
-    filter: blur(0.8px);
-    transform: translateY(0.01em);
-  }
-
-  58% {
-    opacity: 0.95;
-    filter: blur(0px);
-    transform: translateY(0);
-  }
-
-  68% {
-    opacity: 0.45;
-    filter: blur(1.6px);
-    transform: translateY(0.01em);
-  }
-
-  82% {
-    opacity: 0.08;
-    filter: blur(4px);
-    transform: translateY(0.02em);
-  }
-}
-
-/* optional: keep hover subtle and clean */
-.logo-block:hover .logo-live {
-  color: #ffffff;
-}
-
-.logo-block:hover .logo-pixel {
-  color: #bd93f9;
-}
-
 /* make sure the Hire Me button does not wrap */
 .nav-cta {
   white-space: nowrap;
