@@ -1537,3 +1537,17 @@ p {
   background: var(--bg);
   box-shadow: none;
 }
+.contact-note {
+  padding-top: 1rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.contact-note a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.contact-note a:hover {
+  text-decoration: underline;
+}
