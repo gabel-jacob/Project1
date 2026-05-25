@@ -168,14 +168,7 @@ p {
   color: var(--muted);
 }
 
-.logo-block:hover .logo-accent {
-  color: var(--cyan);
-}
 
-.logo-block:hover .logo-signal {
-  background: var(--cyan);
-  box-shadow: 0 0 14px rgba(139, 233, 253, 0.85);
-}
 /* make sure the Hire Me button does not wrap */
 .nav-cta {
   text-decoration: none;
@@ -1328,31 +1321,195 @@ p {
   transition: color 0.25s ease;
 }
 
-/* hover: same family as Hire Me */
+/* =========================
+   LOGO HOVER FIX
+========================= */
+
 .logo-block:hover {
   background: var(--accent);
 }
 
-.logo-block:hover .logo-name {
+.logo-block:hover .logo-name,
+.logo-block:hover .logo-divider,
+.logo-block:hover .logo-accent,
+.logo-block:hover .logo-sub {
   color: var(--bg);
-}
-
-.logo-block:hover .logo-divider {
-  color: var(--bg);
-  opacity: 0.75;
 }
 
 .logo-block:hover .logo-accent {
-  color: var(--text);
-  background: var(--bg);
-  padding: 0.08rem 0.3rem;
+  background: transparent;
+  padding: 0;
 }
 
 .logo-block:hover .logo-signal {
   background: var(--bg);
   box-shadow: none;
 }
+/* =========================
+   CONTACT PAGE REBALANCE
+========================= */
 
-.logo-block:hover .logo-sub {
-  color: var(--bg);
+.contact-page {
+  padding-top: 5rem;
+  padding-bottom: 7rem;
+}
+
+.contact-hero {
+  max-width: 980px;
+  margin: 0 0 4.5rem;
+}
+
+.contact-hero .section-label {
+  margin-bottom: 1.25rem;
+}
+
+.contact-hero h1 {
+  font-size: clamp(4.5rem, 10vw, 8rem);
+  line-height: 0.88;
+  letter-spacing: -0.075em;
+  text-transform: lowercase;
+  margin-bottom: 1.5rem;
+}
+
+.contact-hero p {
+  max-width: 760px;
+  color: var(--muted);
+  font-size: clamp(1.05rem, 1.8vw, 1.35rem);
+  line-height: 1.75;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: minmax(320px, 0.8fr) minmax(420px, 1.2fr);
+  gap: 2rem;
+  align-items: stretch;
+}
+
+#hire {
+  scroll-margin-top: 130px;
+}
+
+.hire-panel,
+.message-panel {
+  border: 1px solid var(--line);
+  background: rgba(40, 42, 54, 0.34);
+}
+
+.hire-panel {
+  position: sticky;
+  top: 120px;
+  min-height: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.hire-panel h2 {
+  font-size: clamp(2rem, 3.4vw, 3.25rem);
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+  text-transform: lowercase;
+  max-width: 520px;
+}
+
+.hire-panel p {
+  color: var(--muted);
+  font-size: 0.98rem;
+  line-height: 1.8;
+}
+
+.hire-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  padding-top: 1rem;
+}
+
+.hire-tags span {
+  border: 1px solid var(--line);
+  color: var(--muted);
+  padding: 0.45rem 0.75rem;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  transition: color 0.25s ease, border-color 0.25s ease;
+}
+
+.hire-tags span:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.message-panel {
+  padding: 2rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.contact-form {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 1.1rem 1rem;
+  border: 1px solid var(--line);
+  background: rgba(25, 26, 33, 0.42);
+  color: var(--text);
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: var(--muted);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px rgba(80, 250, 123, 0.22);
+}
+
+.contact-form textarea {
+  min-height: 240px;
+  resize: vertical;
+}
+
+.contact-links {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--line);
+}
+
+.contact-links a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.25s ease;
+}
+
+.contact-links a:hover {
+  color: var(--accent);
+}
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hire-panel {
+    position: relative;
+    top: auto;
+  }
+
+  .contact-hero {
+    margin-bottom: 3rem;
+  }
 }
