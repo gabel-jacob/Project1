@@ -103,12 +103,15 @@ p {
   border-left: 1px solid var(--line);
 }
 
-/* ANIMATED WORDMARK */
+/* =========================
+   ANIMATED WORDMARK
+========================= */
+
 .logo-block {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 0.35rem;
+  gap: 0.32rem;
   height: 100%;
   padding: 0 1.6rem;
   min-width: max-content;
@@ -132,86 +135,80 @@ p {
 .logo-gabel-smooth,
 .logo-gabel-pixel {
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.015em;
 }
 
 .logo-jacob {
-  font-family: "Inter", sans-serif;
-  font-size: 1.85rem;
+  font-family: "Syne", "Inter", sans-serif;
+  font-size: 1.9rem;
   font-weight: 700;
   color: var(--text);
-  line-height: 0.95;
-  animation: logoFloatJacob 5.5s ease-in-out infinite;
+  line-height: 0.9;
+  animation: jacobWave 5.5s ease-in-out infinite;
 }
 
 .logo-gabel-wrap {
   position: relative;
   display: inline-block;
-  min-width: 5.4ch;
+  min-width: 5.45ch;
   height: 1em;
   line-height: 1;
 }
 
 .logo-gabel-smooth {
   display: inline-block;
-  font-family: "Inter", sans-serif;
-  font-size: 1.85rem;
-  font-weight: 600;
+  font-family: "Syne", "Inter", sans-serif;
+  font-size: 1.9rem;
+  font-weight: 700;
   color: var(--accent-2);
-  line-height: 0.95;
-  animation: logoFloatGabel 6s ease-in-out infinite;
+  line-height: 0.9;
+  animation: gabelDrift 6.5s ease-in-out infinite;
 }
 
 .logo-gabel-pixel {
   position: absolute;
   left: 0;
   top: 0;
+
   font-family: "Silkscreen", monospace;
-  font-size: 1.85rem;
+  font-size: 1.72rem;
   font-weight: 400;
-  color: var(--accent);
   line-height: 0.95;
-  opacity: 0.45;
+  color: var(--accent);
+
   pointer-events: none;
+  opacity: 0;
+
   clip-path: inset(0 100% 0 0);
+
   animation:
-    pixelSweep 6s ease-in-out infinite,
-    pixelFlicker 2.8s steps(2) infinite;
+    pixelReveal 7s steps(10) infinite,
+    pixelPulse 1.7s steps(2) infinite;
 }
 
 .logo-sub {
   font-family: "Inter", sans-serif;
-  font-size: 0.62rem;
-  font-weight: 500;
+  font-size: 0.58rem;
+  font-weight: 600;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--muted);
 }
 
-.logo-animated:hover .logo-gabel-pixel {
-  animation-duration: 2.8s, 1.2s;
-  opacity: 0.7;
-}
-
-.logo-animated:hover .logo-gabel-smooth {
-  color: var(--accent-2);
-}
-
-.logo-animated:hover .logo-jacob {
-  color: #ffffff;
-}
-
-@keyframes logoFloatJacob {
+/* subtle wave motion */
+@keyframes jacobWave {
   0%, 100% {
     transform: translateY(0);
+    letter-spacing: 0.015em;
   }
 
-  50% {
+  45% {
     transform: translateY(-1px);
+    letter-spacing: 0.035em;
   }
 }
 
-@keyframes logoFloatGabel {
+@keyframes gabelDrift {
   0%, 100% {
     transform: translateY(0) translateX(0);
   }
@@ -221,43 +218,235 @@ p {
   }
 }
 
-@keyframes pixelSweep {
+/* pixel layer slowly overtakes part of Gabel, then resets */
+@keyframes pixelReveal {
   0% {
     clip-path: inset(0 100% 0 0);
-    opacity: 0.08;
+    opacity: 0;
   }
 
-  25% {
-    clip-path: inset(0 62% 0 0);
-    opacity: 0.3;
+  18% {
+    clip-path: inset(0 70% 0 0);
+    opacity: 0.35;
   }
 
-  50% {
-    clip-path: inset(0 36% 0 0);
+  38% {
+    clip-path: inset(0 48% 0 0);
+    opacity: 0.75;
+  }
+
+  58% {
+    clip-path: inset(0 26% 0 0);
+    opacity: 0.95;
+  }
+
+  72% {
+    clip-path: inset(0 44% 0 0);
     opacity: 0.55;
-  }
-
-  75% {
-    clip-path: inset(0 12% 0 0);
-    opacity: 0.28;
   }
 
   100% {
     clip-path: inset(0 100% 0 0);
-    opacity: 0.08;
+    opacity: 0;
   }
 }
 
-@keyframes pixelFlicker {
+@keyframes pixelPulse {
   0%, 100% {
-    filter: drop-shadow(0 0 0 transparent);
+    filter: drop-shadow(0 0 0 rgba(80, 250, 123, 0));
   }
 
   50% {
-    filter: drop-shadow(0 0 8px rgba(80, 250, 123, 0.35));
+    filter: drop-shadow(0 0 9px rgba(80, 250, 123, 0.45));
   }
 }
 
+/* stronger interaction on hover */
+.logo-animated:hover .logo-jacob {
+  color: #ffffff;
+}
+
+.logo-animated:hover .logo-gabel-smooth {
+  color: var(--accent-3);
+}
+
+.logo-animated:hover .logo-gabel-pixel {
+  opacity: 1;
+  clip-path: inset(0 8% 0 0);
+  animation-duration: 2.4s, 1s;
+}
+/* =========================
+   ANIMATED WORDMARK
+========================= */
+
+.logo-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.32rem;
+  height: 100%;
+  padding: 0 1.6rem;
+  min-width: max-content;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.logo-block:visited {
+  color: var(--text);
+}
+
+.logo-main {
+  display: flex;
+  align-items: baseline;
+  gap: 0.55rem;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.logo-jacob,
+.logo-gabel-smooth,
+.logo-gabel-pixel {
+  text-transform: uppercase;
+  letter-spacing: 0.015em;
+}
+
+.logo-jacob {
+  font-family: "Syne", "Inter", sans-serif;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 0.9;
+  animation: jacobWave 5.5s ease-in-out infinite;
+}
+
+.logo-gabel-wrap {
+  position: relative;
+  display: inline-block;
+  min-width: 5.45ch;
+  height: 1em;
+  line-height: 1;
+}
+
+.logo-gabel-smooth {
+  display: inline-block;
+  font-family: "Syne", "Inter", sans-serif;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--accent-2);
+  line-height: 0.9;
+  animation: gabelDrift 6.5s ease-in-out infinite;
+}
+
+.logo-gabel-pixel {
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  font-family: "Silkscreen", monospace;
+  font-size: 1.72rem;
+  font-weight: 400;
+  line-height: 0.95;
+  color: var(--accent);
+
+  pointer-events: none;
+  opacity: 0;
+
+  clip-path: inset(0 100% 0 0);
+
+  animation:
+    pixelReveal 7s steps(10) infinite,
+    pixelPulse 1.7s steps(2) infinite;
+}
+
+.logo-sub {
+  font-family: "Inter", sans-serif;
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* subtle wave motion */
+@keyframes jacobWave {
+  0%, 100% {
+    transform: translateY(0);
+    letter-spacing: 0.015em;
+  }
+
+  45% {
+    transform: translateY(-1px);
+    letter-spacing: 0.035em;
+  }
+}
+
+@keyframes gabelDrift {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+  }
+
+  50% {
+    transform: translateY(1px) translateX(1px);
+  }
+}
+
+/* pixel layer slowly overtakes part of Gabel, then resets */
+@keyframes pixelReveal {
+  0% {
+    clip-path: inset(0 100% 0 0);
+    opacity: 0;
+  }
+
+  18% {
+    clip-path: inset(0 70% 0 0);
+    opacity: 0.35;
+  }
+
+  38% {
+    clip-path: inset(0 48% 0 0);
+    opacity: 0.75;
+  }
+
+  58% {
+    clip-path: inset(0 26% 0 0);
+    opacity: 0.95;
+  }
+
+  72% {
+    clip-path: inset(0 44% 0 0);
+    opacity: 0.55;
+  }
+
+  100% {
+    clip-path: inset(0 100% 0 0);
+    opacity: 0;
+  }
+}
+
+@keyframes pixelPulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 0 rgba(80, 250, 123, 0));
+  }
+
+  50% {
+    filter: drop-shadow(0 0 9px rgba(80, 250, 123, 0.45));
+  }
+}
+
+/* stronger interaction on hover */
+.logo-animated:hover .logo-jacob {
+  color: #ffffff;
+}
+
+.logo-animated:hover .logo-gabel-smooth {
+  color: var(--accent-3);
+}
+
+.logo-animated:hover .logo-gabel-pixel {
+  opacity: 1;
+  clip-path: inset(0 8% 0 0);
+  animation-duration: 2.4s, 1s;
+}
 /* NAV LINKS */
 .menu {
   display: grid;
