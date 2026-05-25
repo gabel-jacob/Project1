@@ -1513,3 +1513,27 @@ p {
     margin-bottom: 3rem;
   }
 }
+/* =========================
+   LOGO HOVER FIX
+========================= */
+
+.logo-block:hover {
+  background: var(--accent);
+}
+
+.logo-block:hover .logo-name,
+.logo-block:hover .logo-divider,
+.logo-block:hover .logo-accent,
+.logo-block:hover .logo-sub {
+  color: var(--bg);
+}
+
+.logo-block:hover .logo-accent {
+  background: transparent;
+  padding: 0;
+}
+
+.logo-block:hover .logo-signal {
+  background: var(--bg);
+  box-shadow: none;
+}
