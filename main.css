@@ -1055,33 +1055,68 @@ p {
   }
 }
 /* =========================
-   HIRE / PROJECT INQUIRY PANEL
+   CONTACT PAGE
 ========================= */
+
+.contact-page {
+  padding-top: 5rem;
+  padding-bottom: 7rem;
+}
+
+.contact-hero {
+  max-width: 980px;
+  margin: 0 auto 5rem;
+}
+
+.contact-hero h1 {
+  font-size: clamp(4rem, 10vw, 8rem);
+  line-height: 0.9;
+  letter-spacing: -0.07em;
+  text-transform: lowercase;
+  margin-bottom: 1.5rem;
+}
+
+.contact-hero p {
+  max-width: 850px;
+  color: var(--muted);
+  font-size: clamp(1.1rem, 2vw, 1.45rem);
+  line-height: 1.7;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 2rem;
+  align-items: start;
+}
 
 #hire {
   scroll-margin-top: 130px;
 }
 
-.hire-panel {
-  text-align: left;
+.hire-panel,
+.message-panel {
   border: 1px solid var(--line);
   background: rgba(40, 42, 54, 0.42);
   padding: 2rem;
+}
+
+.hire-panel {
+  position: sticky;
+  top: 120px;
   display: grid;
   gap: 1.25rem;
 }
 
 .hire-panel h2 {
-  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-size: clamp(2rem, 4vw, 3.35rem);
   line-height: 0.95;
-  letter-spacing: -0.05em;
+  letter-spacing: -0.055em;
   text-transform: lowercase;
-  max-width: 850px;
 }
 
 .hire-panel p {
   color: var(--muted);
-  max-width: 850px;
   font-size: 1rem;
   line-height: 1.8;
 }
@@ -1090,6 +1125,7 @@ p {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
+  padding-top: 0.5rem;
 }
 
 .hire-tags span {
@@ -1099,18 +1135,81 @@ p {
   font-size: 0.72rem;
   text-transform: uppercase;
   letter-spacing: 1.4px;
+  transition: color 0.25s ease, border-color 0.25s ease;
 }
 
 .hire-tags span:hover {
   border-color: var(--accent);
   color: var(--accent);
 }
+
+.message-panel {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.contact-form {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 1.1rem 1rem;
+  border: 1px solid var(--line);
+  background: rgba(25, 26, 33, 0.35);
+  color: var(--text);
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: var(--muted);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px rgba(80, 250, 123, 0.25);
+}
+
+.contact-form textarea {
+  min-height: 220px;
+  resize: vertical;
+}
+
+.contact-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+}
+
+.contact-links a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.25s ease;
+}
+
+.contact-links a:hover {
+  color: var(--accent);
+}
+
+/* =========================
+   NAV CTA FIX
+========================= */
+
 .header-right .nav-cta,
 .header-right .nav-cta:link,
 .header-right .nav-cta:visited {
   height: 100%;
   min-height: 76px;
-  min-width: 150px;
+  min-width: 170px;
 
   display: inline-flex;
   align-items: center;
@@ -1138,4 +1237,13 @@ p {
 
 .header-right .nav-cta span {
   text-decoration: none !important;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  flex: 0 0 8px;
+  display: inline-block;
+  background: var(--accent);
+  box-shadow: 0 0 14px rgba(80, 250, 123, 0.8);
 }
