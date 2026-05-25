@@ -8,14 +8,14 @@
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="main.css">
 
-  <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Gajraj+One&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 </head>
 
 <body>
 
-   <header class="site-header">
+  <header class="site-header">
     <nav class="nav container">
 
       <div class="header-left">
@@ -57,52 +57,68 @@
 
     </nav>
   </header>
+
   <main class="container work-page">
 
     <section class="work-intro">
+      <span class="section-label">archive / selected systems</span>
+
       <h1>selected work</h1>
+
       <p>
-        A collection of projects across frontend development, UX design,
-        systems programming, and database systems.
+        A collection of projects across CNC fabrication, UX research,
+        frontend development, physical prototyping, and systems programming.
       </p>
     </section>
 
     <section class="project-grid">
 
-      <a href="project.html?id=project1" class="product-card">
-        <img src="pictures/DRWBYtv.jpeg" alt="Portfolio website project">
-        <h3>Portfolio Website Redesign</h3>
-        <p>Frontend Development / HTML / CSS / JavaScript</p>
+      <a href="retrofuturismo-keyboard.html" class="project-tile">
+        <span class="project-number">01</span>
+        <span class="project-type">flagship</span>
+        <h3>Custom Retrofuturismo Keyboard</h3>
+        <img src="pictures/keyboard-final.jpg" alt="Custom wooden keyboard">
+        <div class="project-meta">CNC / Rhino / Product Design / Physical Interface</div>
       </a>
 
-      <a href="parking.html" class="product-card">
-        <img src="pictures/FqSCOvL.jpeg" alt="Parking app UX project">
+      <a href="parking.html" class="project-tile">
+        <span class="project-number">02</span>
+        <span class="project-type">ux research</span>
         <h3>GopherParkLive</h3>
-        <p>UX Research / UI Design / Prototyping</p>
+        <img src="pictures/gopherpark-cover.jpg" alt="GopherParkLive app prototype">
+        <div class="project-meta">Research / Testing / Prototyping / Figma</div>
       </a>
 
-      <a href="project.html?id=project3" class="product-card">
-        <img src="pictures/QLnZAoA.jpeg" alt="Database systems project">
-        <h3>PostgreSQL Buffer Manager Lab</h3>
-        <p>C / Database Systems / Query Optimization</p>
+      <a href="keyboard-redesign.html" class="project-tile">
+        <span class="project-number">03</span>
+        <span class="project-type">iteration</span>
+        <h3>Walnut Keyboard Redesign</h3>
+        <img src="pictures/keyboard-redesign.jpg" alt="Walnut keyboard redesign">
+        <div class="project-meta">Tolerance Refinement / Rhino / CNC / Walnut</div>
       </a>
 
-      <a href="project.html?id=project4" class="product-card">
-        <img src="pictures/VNhvvaN.jpeg" alt="Memory allocator project">
-        <h3>Explicit List Memory Allocator</h3>
-        <p>C / Systems Programming / Memory Management</p>
+      <a href="wave-shelf.html" class="project-tile">
+        <span class="project-number">04</span>
+        <span class="project-type">object</span>
+        <h3>Walnut & Maple Wave Shelf</h3>
+        <img src="pictures/wave-shelf.jpg" alt="Walnut and maple shelf">
+        <div class="project-meta">Furniture / CNC / 3D Prototype / Joinery</div>
       </a>
 
-      <a href="project.html?id=project5" class="product-card">
-        <img src="pictures/p995ibU.jpeg" alt="Ecommerce storefront project">
-        <h3>Niko & Co Storefront</h3>
-        <p>Frontend Development / Ecommerce UI</p>
+      <a href="systems.html" class="project-tile">
+        <span class="project-number">05</span>
+        <span class="project-type">technical</span>
+        <h3>Systems Programming</h3>
+        <img src="pictures/systems-cover.jpg" alt="Systems programming project">
+        <div class="project-meta">C / PostgreSQL / Memory Allocator</div>
       </a>
 
-      <a href="project.html?id=project6" class="product-card">
-        <img src="pictures/zBYUKh5.jpeg" alt="UX usability testing project">
-        <h3>Usability Testing Study</h3>
-        <p>HCI / User Research / Design Evaluation</p>
+      <a href="portfolio-system.html" class="project-tile">
+        <span class="project-number">06</span>
+        <span class="project-type">frontend</span>
+        <h3>Portfolio System</h3>
+        <img src="pictures/portfolio-cover.jpg" alt="Portfolio website project">
+        <div class="project-meta">HTML / CSS / Design System / Interaction</div>
       </a>
 
     </section>
@@ -110,7 +126,9 @@
   </main>
 
   <footer class="site-footer">
-    <p>© 2026 Jacob Gabel</p>
+    <span>© 2026 Jacob Gabel</span>
+    <span>Minneapolis, MN</span>
+    <span>UX / Frontend / Fabrication</span>
   </footer>
 
 </body>
