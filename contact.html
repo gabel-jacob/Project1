@@ -8,20 +8,25 @@
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="main.css">
 
-  <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Gajraj+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 </head>
 
 <body>
 
-   <header class="site-header">
+  <header class="site-header">
     <nav class="nav container">
 
       <div class="header-left">
         <a href="index.html" class="logo-block">
-          <span class="logo">Jacob Gabel</span>
-          <span class="logo-sub">product / systems / fabrication</span>
+          <span class="logo-wordmark">
+            <span class="logo-name">jacob</span>
+            <span class="logo-divider">/</span>
+            <span class="logo-accent">gabel</span>
+            <span class="logo-signal"></span>
+          </span>
+
+          <span class="logo-sub">product systems fabrication</span>
         </a>
       </div>
 
@@ -49,25 +54,28 @@
       </ul>
 
       <div class="header-right">
-        <a href="contact.html" class="nav-cta">
+        <a href="contact.html#hire" class="nav-cta">
           <span class="status-dot"></span>
-          Hire Me
+          <span>Hire Me</span>
         </a>
       </div>
 
     </nav>
   </header>
 
-  <main class="container contact-layout">
+  <main id="hire" class="container contact-layout">
 
     <div class="contact-content">
 
       <div class="contact-intro">
+        <span class="section-label">inquiry / collaboration</span>
+
         <h1>contact</h1>
 
         <p>
-          Interested in collaborating, discussing a project,
-          or just connecting? Feel free to reach out.
+          Interested in collaborating, discussing a project, or connecting about
+          UX, frontend development, fabrication, or physical-digital product work?
+          Send a message below.
         </p>
       </div>
 
@@ -77,9 +85,9 @@
 
         <input type="email" placeholder="Email" required>
 
-        <textarea placeholder="Message"></textarea>
+        <textarea placeholder="Message" required></textarea>
 
-        <button class="btn">Send Message</button>
+        <button class="btn" type="submit">Send Message</button>
 
       </form>
 
@@ -100,7 +108,9 @@
   </main>
 
   <footer class="site-footer">
-    <p>© 2026 Jacob Gabel</p>
+    <span>© 2026 Jacob Gabel</span>
+    <span>Minneapolis, MN</span>
+    <span>UX / Frontend / Fabrication</span>
   </footer>
 
 </body>
