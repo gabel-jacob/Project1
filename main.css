@@ -103,7 +103,7 @@ p {
 }
 
 /* =========================
-   CLEAN MODERN WORDMARK
+   LOWERCASE PIXEL-MORPH LOGO
 ========================= */
 
 .logo-block {
@@ -123,113 +123,148 @@ p {
 }
 
 .logo-wordmark {
-  display: inline-flex;
-  align-items: baseline;
-  gap: 0.42rem;
-
-  font-family: "Space Grotesk", "Inter", sans-serif;
-  font-size: 2rem;
-  font-weight: 600;
-  line-height: 0.9;
-  letter-spacing: -0.035em;
-
-  text-transform: none;
-  white-space: nowrap;
-}
-
-.logo-name {
-  color: var(--text);
-}
-
-.logo-accent {
   position: relative;
-  color: var(--accent-2);
+  display: inline-block;
+  line-height: 0.9;
+  white-space: nowrap;
+  min-height: 1em;
 }
 
-/* animated accent line, not animated letters */
-.logo-accent::after {
-  content: "";
+.logo-live,
+.logo-pixel {
+  display: block;
+  text-transform: lowercase;
+}
+
+.logo-live {
+  position: relative;
+  z-index: 1;
+
+  font-family: "Inter", sans-serif;
+  font-size: 2.05rem;
+  font-weight: 700;
+  letter-spacing: -0.055em;
+  color: #f5f7fb;
+
+  animation: readableFade 6.2s ease-in-out infinite;
+}
+
+.logo-pixel {
   position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -0.22rem;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
 
-  height: 2px;
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    var(--accent) 30%,
-    var(--cyan) 55%,
-    var(--accent-2) 80%,
-    transparent 100%
-  );
+  font-family: "Silkscreen", monospace;
+  font-size: 1.92rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  color: #8be9fd;
 
-  background-size: 220% 100%;
-  opacity: 0.75;
+  opacity: 0;
+  filter: blur(6px);
+  transform: translateY(0.02em);
+  mix-blend-mode: screen;
 
-  animation: wordmarkScan 4.8s ease-in-out infinite;
+  animation: pixelMorph 6.2s ease-in-out infinite;
 }
 
 .logo-sub {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-
   font-family: "Inter", sans-serif;
-  font-size: 0.62rem;
+  font-size: 0.64rem;
   font-weight: 600;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--muted);
 }
 
-.mini-signal {
-  width: 6px;
-  height: 6px;
-  background: var(--accent);
-  box-shadow: 0 0 10px rgba(80, 250, 123, 0.7);
-  animation: signalPulse 2.4s ease-in-out infinite;
-}
-
-.logo-block:hover .logo-accent::after {
-  animation-duration: 2.4s;
-  opacity: 1;
-}
-
-.logo-block:hover .logo-accent {
-  color: var(--cyan);
-}
-
-@keyframes wordmarkScan {
-  0% {
-    background-position: 180% 0;
-    opacity: 0.25;
+/* readable layer gently fades while pixel layer peaks */
+@keyframes readableFade {
+  0%, 18%, 100% {
+    opacity: 1;
+    filter: blur(0px);
   }
 
   35% {
-    opacity: 0.9;
+    opacity: 0.96;
+    filter: blur(0px);
   }
 
-  70% {
-    opacity: 0.55;
+  48% {
+    opacity: 0.72;
+    filter: blur(0.2px);
   }
 
-  100% {
-    background-position: -80% 0;
-    opacity: 0.25;
+  58% {
+    opacity: 0.62;
+    filter: blur(0.45px);
+  }
+
+  72% {
+    opacity: 0.86;
+    filter: blur(0px);
   }
 }
 
-@keyframes signalPulse {
-  0%, 100% {
-    opacity: 0.45;
-    transform: scale(1);
+/* pixel version gradually appears, sharpens, then disappears */
+@keyframes pixelMorph {
+  0%, 16%, 100% {
+    opacity: 0;
+    filter: blur(6px);
+    transform: translateY(0.02em);
+  }
+
+  28% {
+    opacity: 0.12;
+    filter: blur(4px);
+    transform: translateY(0.02em);
+  }
+
+  40% {
+    opacity: 0.35;
+    filter: blur(2.2px);
+    transform: translateY(0.015em);
   }
 
   50% {
-    opacity: 1;
-    transform: scale(1.25);
+    opacity: 0.72;
+    filter: blur(0.8px);
+    transform: translateY(0.01em);
   }
+
+  58% {
+    opacity: 0.95;
+    filter: blur(0px);
+    transform: translateY(0);
+  }
+
+  68% {
+    opacity: 0.45;
+    filter: blur(1.6px);
+    transform: translateY(0.01em);
+  }
+
+  82% {
+    opacity: 0.08;
+    filter: blur(4px);
+    transform: translateY(0.02em);
+  }
+}
+
+/* optional: keep hover subtle and clean */
+.logo-block:hover .logo-live {
+  color: #ffffff;
+}
+
+.logo-block:hover .logo-pixel {
+  color: #bd93f9;
+}
+
+/* make sure the Hire Me button does not wrap */
+.nav-cta {
+  white-space: nowrap;
+  min-width: 140px;
+  justify-content: center;
 }
 /* NAV LINKS */
 .menu {
