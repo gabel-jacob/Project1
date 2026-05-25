@@ -1054,3 +1054,88 @@ p {
     gap: 0.5rem;
   }
 }
+/* =========================
+   HIRE / PROJECT INQUIRY PANEL
+========================= */
+
+#hire {
+  scroll-margin-top: 130px;
+}
+
+.hire-panel {
+  text-align: left;
+  border: 1px solid var(--line);
+  background: rgba(40, 42, 54, 0.42);
+  padding: 2rem;
+  display: grid;
+  gap: 1.25rem;
+}
+
+.hire-panel h2 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+  text-transform: lowercase;
+  max-width: 850px;
+}
+
+.hire-panel p {
+  color: var(--muted);
+  max-width: 850px;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.hire-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.hire-tags span {
+  border: 1px solid var(--line);
+  color: var(--muted);
+  padding: 0.45rem 0.75rem;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+}
+
+.hire-tags span:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.header-right .nav-cta,
+.header-right .nav-cta:link,
+.header-right .nav-cta:visited {
+  height: 100%;
+  min-height: 76px;
+  min-width: 150px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+
+  color: var(--text);
+  text-decoration: none !important;
+
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+
+  background: transparent;
+  border: none;
+}
+
+.header-right .nav-cta:hover {
+  background: var(--accent);
+  color: var(--bg);
+  text-decoration: none !important;
+}
+
+.header-right .nav-cta span {
+  text-decoration: none !important;
+}
