@@ -310,19 +310,9 @@ p {
 }
 
 .nav-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.55rem;
-  min-height: 76px;
-  height: 100%;
-  padding: 0 1.5rem;
-  color: var(--text);
-  text-decoration: none;
-  font-size: 0.9rem;
-  font-weight: 700;
-  background: transparent;
-  border: none;
-  transition: background 0.25s ease, color 0.25s ease;
+  white-space: nowrap;
+  min-width: 140px;
+  justify-content: center;
 }
 
 .nav-cta:visited {
