@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Minneapolis Skatepark Concept — Jacob Gabel</title>
+
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="main.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <nav class="nav container">
+      <div class="header-left">
+        <a href="index.html" class="logo-block">
+          <span class="logo-wordmark">
+            <span class="logo-name">jacob</span>
+            <span class="logo-divider">/</span>
+            <span class="logo-accent">gabel</span>
+            <span class="logo-signal"></span>
+          </span>
+          <span class="logo-sub">product systems fabrication</span>
+        </a>
+      </div>
+
+      <ul class="menu">
+        <li><a href="projects.html"><span class="nav-num">01</span><span class="nav-title">Work</span></a></li>
+        <li><a href="about.html"><span class="nav-num">02</span><span class="nav-title">About</span></a></li>
+        <li><a href="contact.html"><span class="nav-num">03</span><span class="nav-title">Contact</span></a></li>
+      </ul>
+
+      <div class="header-right">
+        <a href="contact.html#hire" class="nav-cta">
+          <span class="status-dot"></span>
+          <span>Hire Me</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container project-page">
+    <a href="projects.html" class="back-btn">← back to work</a>
+    <section class="project-hero">
+      <span class="project-label">06 / spatial concept / rhino cad</span>
+      <h1>Minneapolis Skatepark Concept</h1>
+      <p class="project-description">
+        A Rhino CAD skatepark concept exploring how nature-inspired forms, Japanese architectural references,
+        material contrast, and movement-based interaction can shape a more immersive public skate environment.
+      </p>
+      <div class="project-tags"><span>Rhino CAD</span><span>Spatial Design</span><span>Scale Modeling</span><span>Concept Development</span></div>
+    </section>
+    <section class="project-cover"><img src="pictures/skatepark-cover.jpg" alt="Minneapolis skatepark concept render"></section>
+    <section class="case-study">
+      <div class="case-block"><h2>Concept</h2><p>I designed the park as an interactive landscape rather than a collection of separate ramps, combining concrete, metal, wood, faux water, natural color references, and X Games-inspired movement.</p></div>
+      <div class="case-block"><h2>Scale</h2><p>I started with skateboard dimensions and built the park around movement constraints: board clearance, ramp height, rail placement, landing zones, and feature spacing.</p></div>
+      <div class="case-block"><h2>Features</h2><p>The strongest elements are the bridge ramp over a faux river, the walnut rail, and yin-yang forms that work as architectural markers and moveable skate structures.</p></div>
+    </section>
+    <section class="project-gallery two-up">
+      <figure><img src="pictures/skatepark-bridge.jpg" alt="Bridge ramp with faux river and walnut rail"><figcaption>Bridge ramp, faux river path, and walnut rail detail.</figcaption></figure>
+      <figure><img src="pictures/skatepark-yinyang.jpg" alt="Yin-yang inspired skate elements"><figcaption>Yin-yang inspired forms: one architectural, one moveable and skateable.</figcaption></figure>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>© 2026 Jacob Gabel</span>
+    <span>Minneapolis, MN</span>
+    <span>UX / Frontend / Fabrication</span>
+  </footer>
+
+</body>
+</html>
