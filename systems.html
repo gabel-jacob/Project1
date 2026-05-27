@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Systems Programming — Jacob Gabel</title>
+
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="main.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <nav class="nav container">
+      <div class="header-left">
+        <a href="index.html" class="logo-block">
+          <span class="logo-wordmark">
+            <span class="logo-name">jacob</span>
+            <span class="logo-divider">/</span>
+            <span class="logo-accent">gabel</span>
+            <span class="logo-signal"></span>
+          </span>
+          <span class="logo-sub">product systems fabrication</span>
+        </a>
+      </div>
+
+      <ul class="menu">
+        <li><a href="projects.html"><span class="nav-num">01</span><span class="nav-title">Work</span></a></li>
+        <li><a href="about.html"><span class="nav-num">02</span><span class="nav-title">About</span></a></li>
+        <li><a href="contact.html"><span class="nav-num">03</span><span class="nav-title">Contact</span></a></li>
+      </ul>
+
+      <div class="header-right">
+        <a href="contact.html#hire" class="nav-cta">
+          <span class="status-dot"></span>
+          <span>Hire Me</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container project-page">
+    <a href="projects.html" class="back-btn">← back to work</a>
+    <section class="project-hero">
+      <span class="project-label">07 / technical / systems programming</span>
+      <h1>Systems Programming</h1>
+      <p class="project-description">
+        A collection of lower-level programming projects focused on memory management,
+        pointer arithmetic, x86-64 debugging, and PostgreSQL internals.
+      </p>
+      <div class="project-tags"><span>C</span><span>GDB</span><span>PostgreSQL</span><span>Memory Allocation</span><span>Database Internals</span></div>
+    </section>
+    <section class="project-cover"><img src="pictures/systems-cover.jpg" alt="Systems programming project preview"></section>
+    <section class="case-study">
+      <div class="case-block"><h2>Memory allocator</h2><p>I implemented an explicit-list memory allocator with available and used block lists, block splitting, coalescing, headers, footers, and pointer arithmetic.</p></div>
+      <div class="case-block"><h2>PostgreSQL labs</h2><p>I worked inside PostgreSQL internals to experiment with buffer replacement behavior and optimizer join-path selection using C source changes and runtime logging.</p></div>
+      <div class="case-block"><h2>Debugging</h2><p>These projects required careful use of GDB, C memory layout reasoning, build systems, compiler errors, and step-by-step validation.</p></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>© 2026 Jacob Gabel</span>
+    <span>Minneapolis, MN</span>
+    <span>UX / Frontend / Fabrication</span>
+  </footer>
+
+</body>
+</html>
