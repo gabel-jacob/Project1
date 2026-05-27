@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="main.css">
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Gajraj+One&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -18,8 +18,13 @@
     <nav class="nav container">
       <div class="header-left">
         <a href="index.html" class="logo-block">
-          <span class="logo">Jacob Gabel</span>
-          <span class="logo-sub">product / systems / fabrication</span>
+          <span class="logo-wordmark">
+            <span class="logo-name">jacob</span>
+            <span class="logo-divider">/</span>
+            <span class="logo-accent">gabel</span>
+            <span class="logo-signal"></span>
+          </span>
+          <span class="logo-sub">product systems fabrication</span>
         </a>
       </div>
 
@@ -30,102 +35,31 @@
       </ul>
 
       <div class="header-right">
-        <a href="contact.html" class="nav-cta"><span class="status-dot"></span>Hire Me</a>
+        <a href="contact.html#hire" class="nav-cta">
+          <span class="status-dot"></span>
+          <span>Hire Me</span>
+        </a>
       </div>
     </nav>
   </header>
 
   <main class="container project-page">
-
     <a href="projects.html" class="back-btn">← back to work</a>
-
     <section class="project-hero">
-      <span class="project-label">03 / iteration / fabrication refinement</span>
-
+      <span class="project-label">04 / iteration / fabrication refinement</span>
       <h1>Walnut Keyboard Redesign</h1>
-
       <p class="project-description">
-        A second keyboard case project focused on improving the original design through
-        stronger material choices, tolerance refinement, better internal clearance,
-        improved gasket mount geometry, and a more intentional nature-inspired exterior.
+        A second keyboard case project focused on improving material strength, tolerances,
+        internal clearance, gasket mounting, and the overall product language of the original wooden keyboard.
       </p>
-
-      <div class="project-tags">
-        <span>Walnut</span>
-        <span>Rhino</span>
-        <span>RhinoCAM</span>
-        <span>CNC</span>
-        <span>Tolerance Testing</span>
-      </div>
+      <div class="project-tags"><span>Walnut</span><span>Rhino</span><span>RhinoCAM</span><span>CNC</span><span>Tolerance Testing</span></div>
     </section>
-
-    <section class="project-cover">
-      <img src="pictures/keyboard-redesign.jpg" alt="Walnut keyboard redesign">
-    </section>
-
+    <section class="project-cover"><img src="pictures/keyboard-redesign.jpg" alt="Walnut keyboard redesign"></section>
     <section class="case-study">
-
-      <div class="case-block">
-        <h2>Why redesign?</h2>
-        <p>
-          After finishing the first wooden keyboard case, I identified several areas to
-          improve: weak magnets, case fit, chamfer cleanup, PCB room, gasket mount height,
-          and stronger material selection.
-        </p>
-      </div>
-
-      <div class="case-block">
-        <h2>Design changes</h2>
-        <p>
-          The redesign explored walnut, a more refined case profile, layered mountain
-          details, sun/moon pattern ideas, possible threaded inserts, and better alignment
-          between the top and bottom halves.
-        </p>
-      </div>
-
-      <div class="case-block">
-        <h2>Prototype findings</h2>
-        <p>
-          The first CNC prototype revealed tolerance issues that required sanding and
-          dimensional updates. That failure became the key learning moment: physical
-          prototyping made the problems obvious in a way that CAD alone could not.
-        </p>
-      </div>
-
+      <div class="case-block"><h2>Why redesign?</h2><p>After the first wooden keyboard case, I identified opportunities to improve the construction: closure behavior, cleaner chamfers, PCB room, and more accurate gasket mount height.</p></div>
+      <div class="case-block"><h2>Design changes</h2><p>The redesign explored walnut, a more refined case profile, improved alignment between halves, and a more intentional exterior inspired by natural forms.</p></div>
+      <div class="case-block"><h2>Prototype findings</h2><p>Test fitting revealed tolerance problems that CAD alone did not show. That failure became the key learning moment for the next set of fabrication decisions.</p></div>
     </section>
-
-    <section class="case-study">
-
-      <div class="case-block">
-        <h2>Final direction</h2>
-        <p>
-          I refined the Rhino files, converted the project through RhinoCAM into G-code,
-          and cut the walnut case on a CNC router. Walnut performed better than expected
-          with minimal chipping, making it a stronger direction than the earlier material.
-        </p>
-      </div>
-
-      <div class="case-block">
-        <h2>Role</h2>
-        <p>
-          Concept refinement, CAD redesign, CNC preparation, tolerance testing,
-          material selection, and documentation.
-        </p>
-      </div>
-
-      <div class="case-block">
-        <h2>Build log</h2>
-        <p>
-          The Medium post documents the redesign from improvement list through CNC progress.
-        </p>
-
-        <a class="hero-link" href="https://medium.com/@gabel056/project-1-initial-filework-8b64d16bd24c" target="_blank">
-          read full medium post →
-        </a>
-      </div>
-
-    </section>
-
   </main>
 
   <footer class="site-footer">
