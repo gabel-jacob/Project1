@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ApplyPilot — Jacob Gabel</title>
+
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="main.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <nav class="nav container">
+      <div class="header-left">
+        <a href="index.html" class="logo-block">
+          <span class="logo-wordmark">
+            <span class="logo-name">jacob</span>
+            <span class="logo-divider">/</span>
+            <span class="logo-accent">gabel</span>
+            <span class="logo-signal"></span>
+          </span>
+          <span class="logo-sub">product systems fabrication</span>
+        </a>
+      </div>
+
+      <ul class="menu">
+        <li><a href="projects.html"><span class="nav-num">01</span><span class="nav-title">Work</span></a></li>
+        <li><a href="about.html"><span class="nav-num">02</span><span class="nav-title">About</span></a></li>
+        <li><a href="contact.html"><span class="nav-num">03</span><span class="nav-title">Contact</span></a></li>
+      </ul>
+
+      <div class="header-right">
+        <a href="contact.html#hire" class="nav-cta">
+          <span class="status-dot"></span>
+          <span>Hire Me</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container project-page">
+    <a href="projects.html" class="back-btn">← back to work</a>
+
+    <section class="project-hero">
+      <span class="project-label">03 / product app / resume matching system</span>
+      <h1>ApplyPilot</h1>
+      <p class="project-description">
+        A job-application workflow app designed to help users organize roles,
+        match postings to resume lanes, and understand why a specific resume
+        version fits a specific opportunity.
+      </p>
+      <div class="project-tags">
+        <span>Product Design</span>
+        <span>UX Workflow</span>
+        <span>Resume Matching</span>
+        <span>Frontend UI</span>
+        <span>Electron App Concept</span>
+      </div>
+    </section>
+
+    <section class="project-cover">
+      <img src="pictures/applypilot-cover.jpg" alt="ApplyPilot application dashboard interface">
+    </section>
+
+    <section class="project-summary">
+      <div><span class="section-label">role</span><p>Product direction, interface design, workflow logic, visual system, and iteration.</p></div>
+      <div><span class="section-label">goal</span><p>Reduce job-application friction by helping users choose stronger resume versions for each job.</p></div>
+      <div><span class="section-label">status</span><p>Ongoing prototype / local app concept with planned public launch exploration.</p></div>
+    </section>
+
+    <section class="case-study">
+      <div class="case-block">
+        <h2>Problem</h2>
+        <p>
+          Applying to jobs often becomes messy: postings are saved in different places,
+          resumes are duplicated, and it is not always clear which version of a resume
+          best fits a role.
+        </p>
+      </div>
+      <div class="case-block">
+        <h2>Product idea</h2>
+        <p>
+          ApplyPilot organizes job opportunities into a queue, evaluates them against
+          different resume lanes, and gives the user a “why this resume” explanation
+          before they build an application package.
+        </p>
+      </div>
+      <div class="case-block">
+        <h2>Design direction</h2>
+        <p>
+          I wanted the interface to feel like a focused control panel: readable job cards,
+          clear states, strong hierarchy, and transparent reasoning behind recommendations.
+        </p>
+      </div>
+    </section>
+
+    <section class="project-gallery two-up">
+      <figure>
+        <img src="pictures/applypilot-matching.jpg" alt="ApplyPilot resume matching interface">
+        <figcaption>Weighted matching engine concept showing how a job maps to different resume lanes.</figcaption>
+      </figure>
+      <figure>
+        <img src="pictures/applypilot-package.jpg" alt="ApplyPilot application package panel">
+        <figcaption>Application package panel for resume, cover letter, notes, and submission readiness.</figcaption>
+      </figure>
+    </section>
+
+    <section class="case-study">
+      <div class="case-block">
+        <h2>Resume lanes</h2>
+        <p>
+          ApplyPilot supports multiple resume directions, including UX/product design,
+          frontend development, exhibit fabrication, fabrication engineering, and prototype
+          technician paths.
+        </p>
+      </div>
+      <div class="case-block">
+        <h2>Matching logic</h2>
+        <p>
+          The matching system weighs role signals differently, distinguishing design-tech
+          work from fabrication-heavy roles while still allowing the user to override the recommendation.
+        </p>
+      </div>
+      <div class="case-block">
+        <h2>Explanation layer</h2>
+        <p>
+          The “why this resume” panel explains which keywords, responsibilities, and role
+          patterns influenced the recommendation.
+        </p>
+      </div>
+    </section>
+
+    <section class="case-study">
+      <div class="case-block">
+        <h2>Iteration</h2>
+        <p>
+          Later versions focused on clearer queue behavior, better search results, a stronger
+          application package panel, updated cover letter support, and a more useful fabrication
+          versus design-tech distinction.
+        </p>
+      </div>
+      <div class="case-block">
+        <h2>What I learned</h2>
+        <p>
+          This project pushed me to think about product usefulness, workflow trust,
+          information hierarchy, and how to present recommendations while still giving
+          the user control.
+        </p>
+      </div>
+      <div class="case-block">
+        <h2>Next steps</h2>
+        <p>
+          I would test ApplyPilot with real job seekers, simplify resume lane controls,
+          improve job-import reliability, and explore whether the best launch path is a web app,
+          local desktop app, or hybrid workflow.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>© 2026 Jacob Gabel</span>
+    <span>Minneapolis, MN</span>
+    <span>UX / Frontend / Fabrication</span>
+  </footer>
+
+</body>
+</html>
