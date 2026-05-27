@@ -60,6 +60,23 @@
       <div class="case-block"><h2>PostgreSQL labs</h2><p>I worked inside PostgreSQL internals to experiment with buffer replacement behavior and optimizer join-path selection using C source changes and runtime logging.</p></div>
       <div class="case-block"><h2>Debugging</h2><p>These projects required careful use of GDB, C memory layout reasoning, build systems, compiler errors, and step-by-step validation.</p></div>
     </section>
+    <div class="case-block">
+  <h2>Why this project?</h2>
+  <p>
+    I built this project to better understand how real database systems manage memory under the hood.
+    PostgreSQL relies on a buffer manager to decide which pages stay in memory and which pages are
+    replaced when new data needs to be loaded. Those decisions directly affect query performance,
+    cache behavior, and how efficiently the database uses limited memory.
+  </p>
+
+  <p>
+    Instead of only studying replacement policies conceptually, I wanted to implement one inside an
+    actual database system. By replacing PostgreSQL’s default clock sweep behavior with a custom
+    Top-10 Least Recently Used policy, I could trace how eviction decisions were made, verify the
+    algorithm with debug output, and better understand the tradeoffs between simplicity, recency
+    tracking, and system performance.
+  </p>
+</div>
   </main>
 
   <footer class="site-footer">
