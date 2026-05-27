@@ -8,68 +8,49 @@
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="main.css">
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+
 <body>
 
   <header class="site-header">
     <nav class="nav container">
+      <div class="header-left">
+        <a href="index.html" class="logo-block">
+          <span class="logo-wordmark">
+            <span class="logo-name">jacob</span>
+            <span class="logo-divider">/</span>
+            <span class="logo-accent">gabel</span>
+            <span class="logo-signal"></span>
+          </span>
+          <span class="logo-sub">product systems fabrication</span>
+        </a>
+      </div>
 
-<div class="header-left">
-  <a href="index.html" class="logo-block">
-    <span class="logo-wordmark">
-      <span class="logo-name">jacob</span>
-      <span class="logo-divider">/</span>
-      <span class="logo-accent">gabel</span>
-      <span class="logo-signal"></span>
-    </span>
-
-    <span class="logo-sub">product systems fabrication</span>
-  </a>
-</div>
       <ul class="menu">
-        <li>
-          <a href="projects.html">
-            <span class="nav-num">01</span>
-            <span class="nav-title">Work</span>
-          </a>
-        </li>
-
-        <li>
-          <a href="about.html">
-            <span class="nav-num">02</span>
-            <span class="nav-title">About</span>
-          </a>
-        </li>
-
-       <li>
-    <a href="contact.html">
-      <span class="nav-num">03</span>
-      <span class="nav-title">Contact</span>
-    </a>
-  </li>
+        <li><a href="projects.html"><span class="nav-num">01</span><span class="nav-title">Work</span></a></li>
+        <li><a href="about.html"><span class="nav-num">02</span><span class="nav-title">About</span></a></li>
+        <li><a href="contact.html"><span class="nav-num">03</span><span class="nav-title">Contact</span></a></li>
       </ul>
 
       <div class="header-right">
         <a href="contact.html#hire" class="nav-cta">
-        <span class="status-dot"></span>
-        <span>Hire Me</span>
+          <span class="status-dot"></span>
+          <span>Hire Me</span>
         </a>
       </div>
-
     </nav>
   </header>
 
   <main class="container work-page">
-
     <section class="work-intro">
       <span class="section-label">archive / selected systems</span>
-
       <h1>selected work</h1>
-
       <p>
-        A collection of projects across CNC fabrication, UX research,
-        frontend development, physical prototyping, and systems programming.
+        A focused collection of physical-digital projects across CNC fabrication,
+        UX research, application design, frontend systems, spatial concepts, and
+        low-level technical problem solving.
       </p>
     </section>
 
@@ -91,8 +72,16 @@
         <div class="project-meta">Research / Testing / Prototyping / Figma</div>
       </a>
 
-      <a href="keyboard-redesign.html" class="project-tile">
+      <a href="applypilot.html" class="project-tile">
         <span class="project-number">03</span>
+        <span class="project-type">product app</span>
+        <h3>ApplyPilot</h3>
+        <img src="pictures/applypilot-cover.jpg" alt="ApplyPilot job application matching app interface">
+        <div class="project-meta">UX / Frontend / Matching Logic / Electron</div>
+      </a>
+
+      <a href="keyboard-redesign.html" class="project-tile">
+        <span class="project-number">04</span>
         <span class="project-type">iteration</span>
         <h3>Walnut Keyboard Redesign</h3>
         <img src="pictures/keyboard-redesign.jpg" alt="Walnut keyboard redesign">
@@ -100,31 +89,30 @@
       </a>
 
       <a href="wave-shelf.html" class="project-tile">
-        <span class="project-number">04</span>
+        <span class="project-number">05</span>
         <span class="project-type">object</span>
         <h3>Walnut & Maple Wave Shelf</h3>
         <img src="pictures/wave-shelf.jpg" alt="Walnut and maple shelf">
         <div class="project-meta">Furniture / CNC / 3D Prototype / Joinery</div>
       </a>
 
+      <a href="skatepark-concept.html" class="project-tile">
+        <span class="project-number">06</span>
+        <span class="project-type">spatial concept</span>
+        <h3>Minneapolis Skatepark Concept</h3>
+        <img src="pictures/skatepark-cover.jpg" alt="Minneapolis skatepark concept render">
+        <div class="project-meta">Rhino CAD / Spatial Design / Movement</div>
+      </a>
+
       <a href="systems.html" class="project-tile">
-        <span class="project-number">05</span>
+        <span class="project-number">07</span>
         <span class="project-type">technical</span>
         <h3>Systems Programming</h3>
         <img src="pictures/systems-cover.jpg" alt="Systems programming project">
         <div class="project-meta">C / PostgreSQL / Memory Allocator</div>
       </a>
 
-      <a href="portfolio-system.html" class="project-tile">
-        <span class="project-number">06</span>
-        <span class="project-type">frontend</span>
-        <h3>Portfolio System</h3>
-        <img src="pictures/portfolio-cover.jpg" alt="Portfolio website project">
-        <div class="project-meta">HTML / CSS / Design System / Interaction</div>
-      </a>
-
     </section>
-
   </main>
 
   <footer class="site-footer">
