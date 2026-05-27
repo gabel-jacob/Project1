@@ -8,60 +8,42 @@
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="main.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+
 <body>
 
   <header class="site-header">
     <nav class="nav container">
+      <div class="header-left">
+        <a href="index.html" class="logo-block">
+          <span class="logo-wordmark">
+            <span class="logo-name">jacob</span>
+            <span class="logo-divider">/</span>
+            <span class="logo-accent">gabel</span>
+            <span class="logo-signal"></span>
+          </span>
+          <span class="logo-sub">product systems fabrication</span>
+        </a>
+      </div>
 
-<div class="header-left">
-  <a href="index.html" class="logo-block">
-    <span class="logo-wordmark">
-      <span class="logo-name">jacob</span>
-      <span class="logo-divider">/</span>
-      <span class="logo-accent">gabel</span>
-      <span class="logo-signal"></span>
-    </span>
-
-    <span class="logo-sub">product systems fabrication</span>
-  </a>
-</div>
       <ul class="menu">
-        <li>
-          <a href="projects.html">
-            <span class="nav-num">01</span>
-            <span class="nav-title">Work</span>
-          </a>
-        </li>
-
-        <li>
-          <a href="about.html">
-            <span class="nav-num">02</span>
-            <span class="nav-title">About</span>
-          </a>
-        </li>
-
-       <li>
-    <a href="contact.html">
-      <span class="nav-num">03</span>
-      <span class="nav-title">Contact</span>
-    </a>
-  </li>
+        <li><a href="projects.html"><span class="nav-num">01</span><span class="nav-title">Work</span></a></li>
+        <li><a href="about.html"><span class="nav-num">02</span><span class="nav-title">About</span></a></li>
+        <li><a href="contact.html"><span class="nav-num">03</span><span class="nav-title">Contact</span></a></li>
       </ul>
 
       <div class="header-right">
         <a href="contact.html#hire" class="nav-cta">
-        <span class="status-dot"></span>
-        <span>Hire Me</span>
+          <span class="status-dot"></span>
+          <span>Hire Me</span>
         </a>
       </div>
-
     </nav>
   </header>
 
   <section class="hero">
-
     <div class="hero-image">
       <img src="pictures/keyboard-final.jpg" alt="Custom wooden mechanical keyboard">
     </div>
@@ -72,48 +54,25 @@
     </div>
 
     <div class="hero-layout container">
-
       <div class="hero-left">
+        <span class="hero-tag">Minneapolis / systems / fabrication</span>
 
-        <span class="hero-tag">
-          Minneapolis / systems / fabrication
-        </span>
-
-        <h1>
-          digital products<br>
-          & physical interfaces
-        </h1>
+        <h1>digital products<br>& physical interfaces</h1>
 
         <p class="hero-description">
-          I design campus tools, prototype interfaces in Figma, build frontend systems,
-          and fabricate physical objects like CNC keyboard cases, display pieces, and furniture-scale prototypes.
+          I design accessible digital products through UX research, Figma prototypes,
+          frontend systems, and physical fabrication.
         </p>
 
-        <a href="projects.html" class="hero-link">
-          view selected work →
-        </a>
+        <a href="projects.html" class="hero-link">view selected work →</a>
 
         <div class="hero-spec">
-          <div>
-            <span>currently</span>
-            <strong>building portfolio system</strong>
-          </div>
-
-          <div>
-            <span>focus</span>
-            <strong>ux / frontend / fabrication</strong>
-          </div>
-
-          <div>
-            <span>mode</span>
-            <strong>prototype archive</strong>
-          </div>
+          <div><span>currently</span><strong>building ApplyPilot and portfolio case studies</strong></div>
+          <div><span>focus</span><strong>ux / frontend / fabrication</strong></div>
+          <div><span>mode</span><strong>prototype archive</strong></div>
         </div>
-
       </div>
-
     </div>
-
   </section>
 
   <section class="meta-strip">
@@ -124,15 +83,12 @@
   </section>
 
   <main class="container">
-
     <section class="intro-section">
       <span class="section-label">index / selected projects</span>
-
       <h2>featured work</h2>
-
       <p>
         Selected projects across physical-digital product design, UX research,
-        frontend systems, CNC fabrication, and low-level technical problem solving.
+        application design, CNC fabrication, spatial concepts, and technical systems.
       </p>
     </section>
 
@@ -140,54 +96,53 @@
 
       <a href="retrofuturismo-keyboard.html" class="project-tile">
         <span class="project-number">01</span>
-        <span class="project-type">fabrication</span>
+        <span class="project-type">flagship</span>
         <h3>Custom Retrofuturismo Keyboard</h3>
-        <img src="pictures/keyboard-final.jpg" alt="Custom wooden mechanical keyboard">
-        <div class="project-meta">CNC / Rhino / Product Design / 2024</div>
+        <img src="pictures/keyboard-final.jpg" alt="Custom wooden keyboard">
+        <div class="project-meta">CNC / Rhino / Product Design / Physical Interface</div>
       </a>
 
       <a href="parking.html" class="project-tile">
         <span class="project-number">02</span>
-        <span class="project-type">ux study</span>
+        <span class="project-type">ux research</span>
         <h3>GopherParkLive</h3>
-        <img src="pictures/gopherpark-cover.jpg" alt="GopherParkLive UX prototype">
-        <div class="project-meta">UX Research / Testing / Figma / 2026</div>
+        <img src="pictures/gopherpark-cover.jpg" alt="GopherParkLive app prototype">
+        <div class="project-meta">Research / Testing / Prototyping / Figma</div>
+      </a>
+
+      <a href="applypilot.html" class="project-tile">
+        <span class="project-number">03</span>
+        <span class="project-type">product app</span>
+        <h3>ApplyPilot</h3>
+        <img src="pictures/applypilot-cover.jpg" alt="ApplyPilot job application matching app interface">
+        <div class="project-meta">UX / Frontend / Matching Logic / Electron</div>
       </a>
 
       <a href="keyboard-redesign.html" class="project-tile">
-        <span class="project-number">03</span>
+        <span class="project-number">04</span>
         <span class="project-type">iteration</span>
         <h3>Walnut Keyboard Redesign</h3>
         <img src="pictures/keyboard-redesign.jpg" alt="Walnut keyboard redesign">
-        <div class="project-meta">Rhino / CNC / Tolerances / 2025</div>
+        <div class="project-meta">Tolerance Refinement / Rhino / CNC / Walnut</div>
       </a>
 
       <a href="wave-shelf.html" class="project-tile">
-        <span class="project-number">04</span>
-        <span class="project-type">object design</span>
-        <h3>Walnut & Maple Wave Shelf</h3>
-        <img src="pictures/wave-shelf.jpg" alt="Walnut and maple wave shelf">
-        <div class="project-meta">Furniture / Rhino / CNC / Joinery</div>
-      </a>
-
-      <a href="systems.html" class="project-tile">
         <span class="project-number">05</span>
-        <span class="project-type">technical</span>
-        <h3>Systems Programming</h3>
-        <img src="pictures/systems-cover.jpg" alt="Systems programming project preview">
-        <div class="project-meta">C / PostgreSQL / Memory Management</div>
+        <span class="project-type">object</span>
+        <h3>Walnut & Maple Wave Shelf</h3>
+        <img src="pictures/wave-shelf.jpg" alt="Walnut and maple shelf">
+        <div class="project-meta">Furniture / CNC / 3D Prototype / Joinery</div>
       </a>
 
-      <a href="portfolio-system.html" class="project-tile">
+      <a href="skatepark-concept.html" class="project-tile">
         <span class="project-number">06</span>
-        <span class="project-type">frontend</span>
-        <h3>Portfolio System</h3>
-        <img src="pictures/portfolio-cover.jpg" alt="Portfolio system project preview">
-        <div class="project-meta">HTML / CSS / Interaction Design</div>
+        <span class="project-type">spatial concept</span>
+        <h3>Minneapolis Skatepark Concept</h3>
+        <img src="pictures/skatepark-cover.jpg" alt="Minneapolis skatepark concept render">
+        <div class="project-meta">Rhino CAD / Spatial Design / Movement</div>
       </a>
 
     </section>
-
   </main>
 
   <footer class="site-footer">
