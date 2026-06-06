@@ -80,7 +80,6 @@ p {
 
 .site-header .nav {
   display: grid;
-  grid-template-columns: auto 1fr auto;
   align-items: stretch;
   min-height: 76px;
   background: var(--panel-soft);
@@ -183,7 +182,6 @@ p {
 /* NAV LINKS */
 .menu {
   display: grid;
-  grid-template-columns: repeat(3, minmax(120px, 1fr));
   height: 100%;
   list-style: none;
 }
@@ -1551,3 +1549,187 @@ p {
 .contact-note a:hover {
   text-decoration: underline;
 }
+/* =========================
+   MOBILE NAV FIX
+========================= */
+
+@media (max-width: 760px) {
+  .site-header {
+    position: sticky;
+    top: 0;
+    padding: 0.65rem 0;
+  }
+
+  .site-header .nav.container {
+    width: calc(100% - 28px);
+  }
+
+  .site-header .nav {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "brand cta"
+      "menu menu";
+    min-height: auto;
+    border: 1px solid rgba(166, 173, 200, 0.2);
+    background: rgba(25, 26, 33, 0.96);
+  }
+
+  .header-left {
+    grid-area: brand;
+    border-right: 1px solid rgba(166, 173, 200, 0.16);
+  }
+
+  .header-right {
+    grid-area: cta;
+    border-left: none;
+  }
+
+  .logo-block,
+  .logo-block:link,
+  .logo-block:visited {
+    min-width: 0;
+    width: 100%;
+    padding: 1rem 1rem 0.9rem;
+    gap: 0.35rem;
+  }
+
+  .logo-wordmark {
+    font-size: 1.15rem;
+    gap: 0.32rem;
+  }
+
+  .logo-sub {
+    font-size: 0.48rem;
+    letter-spacing: 0.24em;
+    white-space: nowrap;
+  }
+
+  .logo-signal {
+    width: 6px;
+    height: 6px;
+  }
+
+  .header-right .nav-cta,
+  .header-right .nav-cta:link,
+  .header-right .nav-cta:visited {
+    min-width: 92px;
+    width: 92px;
+    min-height: 100%;
+    height: 100%;
+
+    padding: 0 0.75rem;
+    font-size: 0.82rem;
+    gap: 0.42rem;
+  }
+
+  .status-dot {
+    width: 6px;
+    height: 6px;
+    flex-basis: 6px;
+  }
+
+  .menu {
+    grid-area: menu;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: auto;
+    width: 100%;
+    border-top: 1px solid rgba(166, 173, 200, 0.16);
+  }
+
+  .menu li {
+    border-right: 1px solid rgba(166, 173, 200, 0.16);
+  }
+
+  .menu li:last-child {
+    border-right: none;
+  }
+
+  .menu li a,
+  .menu li a:visited {
+    min-height: 58px;
+    height: 58px;
+    padding: 0;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 0.22rem;
+  }
+
+  .nav-num {
+    font-size: 0.58rem;
+    letter-spacing: 0.12em;
+  }
+
+  .nav-title {
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+
+  .menu li a:hover .nav-title {
+    transform: none;
+  }
+}
+/* =========================
+   MOBILE HERO FIX
+========================= */
+
+@media (max-width: 760px) {
+  .hero {
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-image {
+    position: relative;
+    width: 100%;
+    height: 42vh;
+    order: 1;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .image-label {
+    display: none;
+  }
+
+  .hero-layout {
+    order: 2;
+    display: block;
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+  }
+
+  .hero-left {
+    max-width: 100%;
+  }
+
+  .hero-tag {
+    font-size: 0.62rem;
+    letter-spacing: 0.22em;
+  }
+
+  .hero-left h1 {
+    font-size: clamp(3.8rem, 17vw, 6.5rem);
+    line-height: 0.88;
+    letter-spacing: -0.075em;
+  }
+
+  .hero-description {
+    max-width: 100%;
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .hero-spec {
+    grid-template-columns: 1fr;
+  }
+}
+
+
