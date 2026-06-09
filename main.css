@@ -1731,5 +1731,67 @@ p {
     grid-template-columns: 1fr;
   }
 }
+/* =========================
+   EMERGENCY DESKTOP NAV RESTORE
+========================= */
 
+@media (min-width: 801px) {
+  .site-header .nav {
+    display: grid !important;
+    grid-template-columns: auto 1fr auto !important;
+    align-items: stretch !important;
+    min-height: 76px !important;
+    text-align: left !important;
+  }
+
+  .header-left,
+  .header-right {
+    display: flex !important;
+    align-items: stretch !important;
+    justify-self: stretch !important;
+  }
+
+  .header-left {
+    border-right: 1px solid var(--line) !important;
+  }
+
+  .header-right {
+    border-left: 1px solid var(--line) !important;
+  }
+
+  .menu {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(120px, 1fr)) !important;
+    width: auto !important;
+    height: 100% !important;
+    justify-self: stretch !important;
+  }
+
+  .menu li {
+    border-top: none !important;
+    border-right: 1px solid var(--line) !important;
+  }
+
+  .menu li:last-child {
+    border-right: none !important;
+  }
+
+  .menu li a {
+    min-height: 76px !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+    padding: 0 1.25rem !important;
+  }
+
+  .logo-block {
+    align-items: flex-start !important;
+    min-width: 300px !important;
+    padding: 0 1.6rem !important;
+  }
+
+  .header-right .nav-cta {
+    min-height: 76px !important;
+    min-width: 170px !important;
+  }
+}
 
