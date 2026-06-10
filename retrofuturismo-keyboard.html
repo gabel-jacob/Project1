@@ -9,29 +9,57 @@
   <link rel="stylesheet" href="main.css">
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Gajraj+One&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 </head>
 
 <body>
 
   <header class="site-header">
     <nav class="nav container">
+
       <div class="header-left">
         <a href="index.html" class="logo-block">
-          <span class="logo">Jacob Gabel</span>
-          <span class="logo-sub">product / systems / fabrication</span>
+          <span class="logo-wordmark">
+            <span class="logo-name">jacob</span>
+            <span class="logo-divider">/</span>
+            <span class="logo-accent">gabel</span>
+            <span class="logo-signal"></span>
+          </span>
+
+          <span class="logo-sub">product systems fabrication</span>
         </a>
       </div>
 
       <ul class="menu">
-        <li><a href="projects.html"><span class="nav-num">01</span><span class="nav-title">Work</span></a></li>
-        <li><a href="about.html"><span class="nav-num">02</span><span class="nav-title">About</span></a></li>
-        <li><a href="contact.html"><span class="nav-num">03</span><span class="nav-title">Contact</span></a></li>
+        <li>
+          <a href="projects.html">
+            <span class="nav-num">01</span>
+            <span class="nav-title">Work</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="about.html">
+            <span class="nav-num">02</span>
+            <span class="nav-title">About</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="contact.html">
+            <span class="nav-num">03</span>
+            <span class="nav-title">Contact</span>
+          </a>
+        </li>
       </ul>
 
       <div class="header-right">
-        <a href="contact.html" class="nav-cta"><span class="status-dot"></span>Hire Me</a>
+        <a href="contact.html#hire" class="nav-cta">
+          <span class="status-dot"></span>
+          <span>Hire Me</span>
+        </a>
       </div>
+
     </nav>
   </header>
 
@@ -56,15 +84,43 @@
         <span>3D Printing</span>
         <span>Acrylic Plate</span>
         <span>Keyboard Assembly</span>
+        <span>Wood Finishing</span>
       </div>
     </section>
 
     <section class="project-cover">
       <img src="pictures/keyboard-final.jpeg" alt="Custom Retrofuturismo wooden keyboard">
     </section>
+
+    <section class="project-summary">
+      <div>
+        <span class="section-label">role</span>
+        <p>
+          Concept, CAD modeling, prototype testing, CNC preparation, assembly,
+          sanding, finishing, photography, and documentation.
+        </p>
+      </div>
+
+      <div>
+        <span class="section-label">goal</span>
+        <p>
+          Design and fabricate a custom wooden mechanical keyboard case that felt
+          more like a finished physical product than a standard enclosure.
+        </p>
+      </div>
+
+      <div>
+        <span class="section-label">materials</span>
+        <p>
+          Soft maple, oak, acrylic plate, PCB, switches, stabilizers, PBT keycaps,
+          magnets, lacquer, and resin accent caps.
+        </p>
+      </div>
+    </section>
+
     <section class="case-study">
       <div class="case-block">
-        <h2>Problem</h2>
+        <h2>problem</h2>
         <p>
           I wanted to create a custom keyboard case that felt more like a physical product
           than a standard off-the-shelf enclosure. The challenge was balancing aesthetics,
@@ -73,17 +129,17 @@
       </div>
 
       <div class="case-block">
-        <h2>Process</h2>
+        <h2>process</h2>
         <p>
           I started with a TKL layout and used an open-source plate to establish accurate
           dimensions. From there, I built the case around the plate in Rhino, explored
-          chamfers and fillets, prototyped the plate, test-fit switches/keycaps, and
+          chamfers and fillets, prototyped the plate, test-fit switches and keycaps, and
           refined the CAD before CNC cutting the case halves.
         </p>
       </div>
 
       <div class="case-block">
-        <h2>Fabrication</h2>
+        <h2>fabrication</h2>
         <p>
           The final build used a 1.5mm acrylic plate, gasket-style mounting, a CNC-cut
           soft maple top half, an oak bottom half, USB-C drilling, sanding, lacquer,
@@ -91,15 +147,21 @@
           and resin accent caps.
         </p>
       </div>
-  
-    
-    <section class="project-gallery two-up">
-      <figure><img src="pictures/keyboard-og-filework.png" alt=""><figcaption>Original keyboard design made in Rhino</figcaption></figure>
-      <figure><img src="pictures/keyboard-final-filework.png" alt=""><figcaption>Final simplified keyboard design</figcaption></figure>
     </section>
-    </section>
-    <section class="case-study">
 
+    <section class="project-gallery two-up">
+      <figure>
+        <img src="pictures/keyboard-og-filework.png" alt="Original Rhino keyboard case design">
+        <figcaption>Original keyboard design made in Rhino.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="pictures/keyboard-final-filework.png" alt="Final simplified Rhino keyboard case design">
+        <figcaption>Final simplified keyboard case design after refinement.</figcaption>
+      </figure>
+    </section>
+
+    <section class="case-study">
       <div class="case-block">
         <h2>cnc setup</h2>
         <p>
@@ -131,17 +193,66 @@
           I felt confident moving forward with machining the bottom half of the case.
         </p>
       </div>
+    </section>
+
     <section class="project-gallery two-up">
-      <figure><img src="pictures/keyboard-cnc-cut.jpg" alt=""><figcaption></figcaption></figure>
-      <figure><img src="pictures/keyboard-lowercnc-cut.jpg" alt=""><figcaption></figcaption></figure>
+      <figure>
+        <img src="pictures/keyboard-cnc-cut.jpg" alt="CNC cutting the top half of the keyboard case">
+        <figcaption>CNC cutting the soft maple top half of the keyboard case.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="pictures/keyboard-lowercnc-cut.jpg" alt="CNC cutting the lower half of the keyboard case">
+        <figcaption>CNC cutting the lower case half after the top case test fit.</figcaption>
+      </figure>
     </section>
-    </section>
-    
-    
+
     <section class="case-study">
+      <div class="case-block">
+        <h2>assembly</h2>
+        <p>
+          After machining, I moved into the assembly stage: sanding the case, drilling for USB-C
+          access, setting magnets, installing stabilizers, mounting the acrylic plate, and fitting
+          the switches, keycaps, and PCB. This stage helped reveal how many small physical details
+          affect the feel of a finished product.
+        </p>
+      </div>
 
       <div class="case-block">
-        <h2>What I learned</h2>
+        <h2>finish</h2>
+        <p>
+          The finishing process was important because the keyboard needed to feel refined in the hand,
+          not just technically functional. I sanded the wooden surfaces, cleaned up edges, applied lacquer,
+          and focused on making the material contrast between the case, acrylic plate, keycaps, and resin
+          accents feel intentional.
+        </p>
+      </div>
+
+      <div class="case-block">
+        <h2>outcome</h2>
+        <p>
+          The final keyboard became a functional physical interface and a product design study. It brought
+          together CAD modeling, CNC routing, woodworking, keyboard assembly, material finishing, and visual
+          product documentation into one complete object.
+        </p>
+      </div>
+    </section>
+
+    <section class="project-gallery two-up">
+      <figure>
+        <img src="pictures/keyboard-details.jpg" alt="Close-up details of the finished wooden keyboard">
+        <figcaption>Final detail view showing the wood case, keycaps, and finish.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="pictures/keyboard-final.jpeg" alt="Finished custom wooden mechanical keyboard">
+        <figcaption>Finished custom wooden mechanical keyboard.</figcaption>
+      </figure>
+    </section>
+
+    <section class="case-study">
+      <div class="case-block">
+        <h2>what I learned</h2>
         <p>
           This project taught me how much product design depends on tolerance management,
           material behavior, assembly order, and iteration. It also helped me gain hands-on
@@ -150,15 +261,16 @@
       </div>
 
       <div class="case-block">
-        <h2>Role</h2>
+        <h2>next iteration</h2>
         <p>
-          Concept, CAD modeling, prototype testing, CNC preparation, assembly, sanding,
-          finishing, photography, and documentation.
+          If I continued the project, I would refine the lighting detail, improve the internal
+          cable path, test alternate mounting approaches, and create a cleaner exploded diagram
+          showing how the plate, PCB, case halves, magnets, and hardware fit together.
         </p>
       </div>
 
       <div class="case-block">
-        <h2>Build log</h2>
+        <h2>build log</h2>
         <p>
           The original Medium post documents the full process from ideation to final photos.
         </p>
@@ -167,10 +279,6 @@
           read full medium post →
         </a>
       </div>
-    <section class="project-gallery two-up">
-      <figure><img src="pictures/keyboard-details.jpg" alt=""><figcaption></figcaption></figure>
-      <figure><img src="pictures/keyboard-final.jpeg" alt=""><figcaption></figcaption></figure>
-    </section>
     </section>
 
   </main>
